@@ -1,3 +1,12 @@
-name: S.D. Ellis - Creations, Essays, and Curiosities
-markdown: redcarpet
-pygments: true
+# Site settings
+title: Shaun David Ellis
+email: shaun@sdellis.com
+description: > # this means to ignore newlines until "baseurl:"
+  Creative polymath with iconoclastic tendencies.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://sdellis.com" # the base hostname & protocol for your site
+twitter_username: sdellis
+github_username:  sdellis
+
+# Build settings
+markdown: kramdown
