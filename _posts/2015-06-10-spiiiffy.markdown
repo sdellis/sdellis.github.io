@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Generate IIIF Manifests from METS with oSullivan"
-date:   2013-10-30 14:29:20
+date:   2015-06-10 14:29:20
 categories: tech blogging
 ---
 
