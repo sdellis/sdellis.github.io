@@ -1,0 +1,267 @@
+
+
+
+There has been some interest in the community around how to use the osullivan gem to generate manifests, so I have decided to write a blog post that will document my experience and hopefully be of some use to others who want to start using osullivan.  In this post, I will step through the process of cooking up a utility app that will turn structured data in the METS format into IIIF Presentation API manifests.  
+
+Since we are "cleaning up" the extensive METS data to make it "presentable" on the web, I'm calling the app "spiiiffy".  Our infrastructure already has lots of support for Rails apps, so I'm going to go with the flow and use ruby 2.0.0p451 paired with Rails 4.2.0.  Here we go:
+
+```
+rails new spiiiffy
+```
+
+Spiiiffy will need to take a URL that provides a METS document, use the nokogiri to parse the XML data, and use the osullivan gem to create the Presentation API manifest structure.  Then it will need to store both datastreams and deliver either depending on the request.
+
+So we modify our Gemfile by adding these lines:
+
+```
+...
+
+# Use Nokogiri for XML parsing
+gem 'nokogiri', '>= 1.6.6.2'
+
+# Use osullivan for Manifest creation
+gem 'osullivan', '>= 0.0.3'
+
+...
+``` 
+
+Let's generate our Metadata model and run the migration to create the table:
+
+```
+rails generate scaffold Metadata mets:longtext manifest:longtext title:string
+bundle exec rake db:migrate
+```
+
+Add the accessors to the model:
+
+```
+class Metadatum < ActiveRecord::Base
+  attr_accessor :mets, :manifest, :title, :objid
+  ...
+
+  ...
+end
+```
+
+Before saving, extract the title and objid from the record for human and computer usability:
+
+```
+...
+  before_create :set_title, :set_objid
+  before_update :set_title, :set_objid
+
+  private
+    def set_title
+      mets_doc  = Nokogiri::XML(self.mets)
+      self.title = mets_doc.xpath('(//mods:titleInfo/mods:title/text())[1]', 'mods' => 'http://www.loc.gov/mods/v3')
+      self.title.blank? ? "untitled" : self.title
+    end
+
+  private
+    def set_objid
+      mets_doc  = Nokogiri::XML(self.mets)
+      self.objid = mets_doc.xpath('string(//mets:mets/@OBJID)', 'mets' => 'http://www.loc.gov/METS/')
+    end
+
+...
+
+```
+
+We're going to make sure that we can get to the object using the OBJID instead of the Rails internal id.
+
+```
+...
+
+  def to_param
+    objid
+  end
+
+  #validates_format_of :objid, :with => /\A[a-z].+\z/
+  def self.find(input)
+    input.to_i == 0 ? find_by_objid(input) : super
+  end
+
+...
+```
+
+Start building a manifest with osullivan
+
+```
+...
+  private
+    def make_manifest
+      seed = {
+        '@id' => 'http://localhost:3000/metadata/#{self.objid}',
+        'label' => self.title
+      }
+      # Any options you add are added to the object
+      self.manifest = IIIF::Presentation::Manifest.new(seed)
+    end
+...
+```
+ Note: for some reason, I needed to add ``` require 'iiif/presentation' ``` to the top of the model file even though it's in the Gemfile.  May not be loading correctly.
+
+ I should probably write a test for this, but just to quickly check to make sure it's working, I spun up the rails server and noticed the json data in the manifest textarea when attempting to edit a record.  Huzzzaaah, a baby manifest!
+
+Now we're starting to really get our hands dirty, and it's probably time to refactor some things. For example, in both set_title and set_objid we are doing the same thing:
+
+```mets_doc  = Nokogiri::XML(self.mets)```
+
+We should pull these duplicate steps out and when initialized we create a Nokogiri nodeset object that's accessible to all methods within this class.  I don't know how to do this yet.
+
+We will put off the refactoring for the moment in the interest of working code. The next step is to iterate over the mets:structMap and add canvases to our baby manifest. So, yet again, we create a Nokogiri doc from the METS, get our ordered list, and also grab all the image files from the fileSec:
+
+```
+mets_doc  = Nokogiri::XML(self.mets)
+
+#get structMap ... start with ordered list
+ol = mets_doc.xpath('//mets:structMap/mets:div/mets:div[@TYPE="OrderedList"]/mets:div', 'mets' => 'http://www.loc.gov/METS/')
+
+#get fileSec
+files = mets_doc.xpath('//mets:fileSec/mets:fileGrp[@USE="deliverables"]/mets:file', 'mets' => 'http://www.loc.gov/METS/', 'xlink' => 'http://www.w3.org/1999/xlink')
+```
+
+Our mets:file references have two different identifiers in addition to a URN associated with them.  One identifier (@ADMID) is used by mets:techMD and the other (@ID) is usec by mets:structMap.  In order to easily work access both, I'm going to create a hash with both of these identifiers and grab our :
+
+```
+files_hash = Hash.new
+
+files.each do |file|
+  fid = file.xpath('string(@ID)', 'mets' => 'http://www.loc.gov/METS/', 'xlink' => 'http://www.w3.org/1999/xlink')
+  fadmid = file.xpath('string(@ADMID)', 'mets' => 'http://www.loc.gov/METS/', 'xlink' => 'http://www.w3.org/1999/xlink')
+  files_hash[fid] = fadmid
+end  
+```
+Ok, so it's easy to get the label and order number from our structMap, and we can use that file_hash to get at the image dimensions to set on each canvas: 
+
+```
+ol.each do |item|
+        label = item.xpath('string(@LABEL)', 'mets' => 'http://www.loc.gov/METS/')
+        order = item.xpath('string(@ORDER)', 'mets' => 'http://www.loc.gov/METS/')
+        item_id = item.xpath('string(mets:fptr/@FILEID)', 'mets' => 'http://www.loc.gov/METS/')
+
+        item_aid = files_hash[item_id]
+
+        iw = '//techMD[@ID="' + item_aid + '"]//imageWidth/text()'
+        ih = '//techMD[@ID="' + item_aid + '"]//imageHeight/text()'
+
+        img_width = mets_doc.xpath(iw, 'mets' => 'http://www.loc.gov/METS/').to_s
+        img_height = mets_doc.xpath(ih, 'mets' => 'http://www.loc.gov/METS/').to_s
+		# let's print out the img_width to make sure this is working...
+		puts img_width
+end
+```
+Uh oh!  Nothing!  Looking at the mets:techMD section I think there's a namespace issue in getting at our image dimensions:
+
+```
+<mets:techMD ID="uoma">
+  <mets:mdWrap MDTYPE="NISOIMG">
+    <mets:xmlData>
+      <mix xmlns="http://www.loc.gov/mix/v20" xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+        <BasicImageInformation>
+          <BasicImageCharacteristics>
+            <imageWidth>5674</imageWidth>
+            <imageHeight>7200</imageHeight>
+          </BasicImageCharacteristics>
+        </BasicImageInformation>
+      </mix>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:techMD>
+```
+
+Yes, there's probably a better way to do this, but I don't mind being a bit sloppy here in the interest of getting working code.  I'm going to clone the mets_doc and wipe out the namespaces for this one step:
+
+```
+slop = mets_doc.clone
+slop.remove_namespaces!
+
+ol.each do |item|
+        label = item.xpath('string(@LABEL)', 'mets' => 'http://www.loc.gov/METS/')
+        order = item.xpath('string(@ORDER)', 'mets' => 'http://www.loc.gov/METS/')
+        item_id = item.xpath('string(mets:fptr/@FILEID)', 'mets' => 'http://www.loc.gov/METS/')
+
+        item_aid = files_hash[item_id]
+
+        iw = '//techMD[@ID="' + item_aid + '"]//imageWidth/text()'
+        ih = '//techMD[@ID="' + item_aid + '"]//imageHeight/text()'
+
+        img_width = slop.xpath(iw, 'mets' => 'http://www.loc.gov/METS/').to_s
+        img_height = slop.xpath(ih, 'mets' => 'http://www.loc.gov/METS/').to_s
+		# let's print out the img_width to make sure this is working...
+		puts img_width
+end
+```
+
+Hooray! Now we can remove our puts statement and actually add all this data to the Canvas.  The full block would look like this:
+```
+      ol.each do |item|
+        label = item.xpath('string(@LABEL)', 'mets' => 'http://www.loc.gov/METS/')
+        order = item.xpath('string(@ORDER)', 'mets' => 'http://www.loc.gov/METS/')
+        item_id = item.xpath('string(mets:fptr/@FILEID)', 'mets' => 'http://www.loc.gov/METS/')
+
+        item_aid = files_hash[item_id]
+
+        iw = '//techMD[@ID="' + item_aid + '"]//imageWidth/text()'
+        ih = '//techMD[@ID="' + item_aid + '"]//imageHeight/text()'
+
+        img_width = slop.xpath(iw, 'mets' => 'http://www.loc.gov/METS/').to_s
+        img_height = slop.xpath(ih, 'mets' => 'http://www.loc.gov/METS/').to_s
+
+        canvas = IIIF::Presentation::Canvas.new()
+
+        canvas['@id'] = "#{m['@id']}/canvas/#{order}"
+
+        canvas.width = img_width.to_i
+        canvas.height = img_height.to_i
+        canvas.label = label
+
+        # put the code for grabbing images here
+
+        m.sequences << canvas
+        self.manifest = m.to_json(pretty:false)
+      end
+```
+
+So, that is a long block.  In fact, we're going to need to make it longer because in the same pass we are going to want to add the Images to the Canvas before adding it to ```m.sequences```:
+
+```
+i_urn = '//mets:file[@ADMID="' + item_aid +'"]/mets:FLocat/@xlink:href'
+img_id = mets_doc.xpath(i_urn, 'mets' => 'http://www.loc.gov/METS/', 'xlink' => 'http://www.w3.org/1999/xlink').to_s.sub(/^urn:pudl:images:deliverable:/,'')
+
+i = IIIF::Presentation::ImageResource.new()
+
+i['@id'] = "http://libimages.princeton.edu/loris2/#{img_id}/full/#{img_width},#{img_height}/0/default.jpg"
+i.format = "image/jpeg"
+i.width = canvas.width
+i.height = canvas.height
+
+r = IIIF::Presentation::Resource.new('@type' => 'oa:Annotation', 'motivation' => 'sc:painting', '@id' => '#{canvas["@id"]}/images', 'resource' => i)
+
+canvas.images << r
+
+```
+
+Ok, we have to do one more thing before we can have a workable IIIF Manifest: add the service information.  This should be rather simple as we just need to create a new resource that we stuff into the ImageResource, the same way we inserted the ImageResource into the Images Resource that lists ImageResources (I know, it gets crazy!).  Probably simpler to show:
+
+```
+s = IIIF::Presentation::Resource.new('@context' => 'http://iiif.io/api/image/2/context.json', 'profile' => 'http://iiif.io/api/image/2/level2.json', '@id' => "http://libimages.princeton.edu/loris2/#{img_id}")
+
+        i = IIIF::Presentation::ImageResource.new()
+
+        i['@id'] = "http://libimages.princeton.edu/loris2/#{img_id}/full/#{img_width},#{img_height}/0/default.jpg"
+        i.format = "image/jpeg"
+        i.width = canvas.width
+        i.height = canvas.height
+        i.service = s
+```
+
+So, what is this @context and profile stuff?  See this:
+https://wiki1.hbz-nrw.de/display/SEM/2013/08/01/Sharing+context+-+publishing+application+profiles+with+JSON-LD
+
+
+
+
+
+
+
