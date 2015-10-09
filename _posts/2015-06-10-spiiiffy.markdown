@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "How to Generate IIIF Manifests from METS with oSullivan"
+date:   2013-10-30 14:29:20
+categories: tech blogging
+---
 
 There has been some interest in the community around how to use the osullivan gem to generate manifests, so I have decided to write a blog post that will document my experience and hopefully be of some use to others who want to start using osullivan.  In this post, I will step through the process of cooking up a utility app that will turn structured data in the METS format into IIIF Presentation API manifests.  
 
