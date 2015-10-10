@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Ideal UX Desiger"
+title:  "The Ideal UX Designer"
 date:   2013-10-30 14:29:20
 categories: tech blogging
 ---
