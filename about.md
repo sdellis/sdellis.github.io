@@ -8,22 +8,21 @@ permalink: /cv/
 609.933.7442 &bull; shaun@sdellis.com
 
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
-software applications, and bring a unique set of skills to exploring our cultural history.  My bachelors
-degree has given me a deep understanding of the history and practice of art and design.  This background, combined with years
-of programming, a Masters in Library and Information Science, and ten years experience of full stack development for academic libraries,
-provide the ideal skillset for supporting research in the Digital Humanities.  
+software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
+the design and creation of of tools that help us explore the relationships and patterns among data that only computers can help us discover.  My bachelors degree has given me a deep understanding of the history and practice of art and design, while years
+of programming practice, a Masters in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.  
 
 ## Skills
 * Semantic accessible HTML5
 * CSS, SCSS, LESS, responsive design
-* JavaScript (native, jQuery, Node/Express.js/npm, Backbone, React/Flux, Mocha, Selenium)
-* Ruby (Rails, Sinatra, Jekyll, scripting, Nokogiri, Hydra basics)
+* JavaScript (native, jQuery, Node/Express.js/npm, Backbone, React/Flux, [Istanbul/Mocha](https://github.com/IIIF/manifesto/graphs/contributors), Selenium)
+* Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, Hydra basics)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
 * Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7)
-* Graphic Design (prototyping, design systems, Photoshop, Illustrator)
-* [Information Visualization](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song) ([Tableau](https://sites.google.com/site/visualizingahit/results), Raphael, d3)
+* Graphic Design ([prototyping](https://github.com/sdellis/bluemountain), design systems, Photoshop, Illustrator)
+* [Information Visualization](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song) ([Tableau](https://sites.google.com/site/visualizingahit/results), [Raphael](http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html), d3)
 * Databases & Data Structures (relational/SQL, document-oriented, XML, json, RDF/LinkedData)
-* REST API Development
+* [REST API Development](http://sdellis.com/docs/blue_mountain_ui_spec.pdf)
 * Knowledge of Metadata Standards (IIIF, RDF/Linked Data, Dublin Core, METS, PREMIS, MODS, VRA Core, EAD, SKOS)
 * Test Driven Development & Continuous Integration (mocha, istanbul, rspec, TravisCI)
 * [UX design](http://journal.code4lib.org/articles/7394), interaction design, [usability testing](http://sdellis.com/docs/pul_website_usability_study.pdf)
