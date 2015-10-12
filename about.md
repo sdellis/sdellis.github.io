@@ -15,7 +15,7 @@ of programming practice, a Masters in Library and Information Science, and ten y
 ## Skills
 * Semantic accessible HTML5
 * CSS, SCSS, LESS, responsive design
-* JavaScript (native, jQuery, Node/Express.js/npm, Backbone, React/Flux, Mocha, Selenium)
+* JavaScript (native, jQuery, Node/Express.js/npm, Backbone, React/Flux, [Istanbul/Mocha](https://github.com/IIIF/manifesto/graphs/contributors), Selenium)
 * Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, Hydra basics)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
 * Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7)
