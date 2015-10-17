@@ -5,7 +5,7 @@ date:   2014-07-12 08:53:05
 categories: music blogging
 ---
 
-A friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon's lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It's a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom.
+As I have many interests, I don't always write about technology.  Here's something of a friendly rant I spun out after a friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon in my area.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon's lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It's a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I've gathered over the years.
 
 ## Musicians First!
 It may seem paradoxical, but when running a music venue, your clientele are not the patrons, the musicians are.  Musicians get treated like crap.  I can only imagine the thinking behind this is that we are a dime a dozen.  Everyone plays music these days, and many folks will play for free just to get heard.  The idea that musicians are expendable is the kiss of death for any entertainment venue.

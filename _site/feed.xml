@@ -6,8 +6,8 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 12 Oct 2015 16:58:03 -0400</pubDate>
-    <lastBuildDate>Mon, 12 Oct 2015 16:58:03 -0400</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2015 11:54:52 -0400</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2015 11:54:52 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,7 +18,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spiiiffy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Spiiiffy will need to take a URL that provides a METS document, use the nokogiri to parse the XML data, and use the osullivan gem to create the Presentation API manifest structure.  Then it will need to store both datastreams and deliver either depending on the request.&lt;/p&gt;
+&lt;p&gt;Spiiiffy will need to take a URL that provides a METS document, use the nokogiri gem to parse the XML data, and use the osullivan gem to create the Presentation API manifest structure.  Then it will need to store both datastreams and deliver either depending on the request.&lt;/p&gt;
 
 &lt;p&gt;So we modify our Gemfile by adding these lines:&lt;/p&gt;
 
@@ -253,7 +253,7 @@
     
       <item>
         <title>On Booking</title>
-        <description>&lt;p&gt;A friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon’s lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It’s a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom.&lt;/p&gt;
+        <description>&lt;p&gt;As I have many interests, I don’t always write about technology.  Here’s something of a friendly rant I spun out after a friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon in my area.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon’s lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It’s a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I’ve gathered over the years.&lt;/p&gt;
 
 &lt;h2 id=&quot;musicians-first&quot;&gt;Musicians First!&lt;/h2&gt;
 &lt;p&gt;It may seem paradoxical, but when running a music venue, your clientele are not the patrons, the musicians are.  Musicians get treated like crap.  I can only imagine the thinking behind this is that we are a dime a dozen.  Everyone plays music these days, and many folks will play for free just to get heard.  The idea that musicians are expendable is the kiss of death for any entertainment venue.&lt;/p&gt;
@@ -306,7 +306,7 @@
       </item>
     
       <item>
-        <title>King of My Own Domain On a Pauper’s Budget</title>
+        <title>Publish a Website With a Custom Domain On a Shoestring</title>
         <description>&lt;p&gt;Alternate Title: How To Create Your Own Website For Next to Nothing&lt;/p&gt;
 
 &lt;p&gt;For a long time, home ownership was a key indicator of fulfillment of the American Dream.  We believe we’ve achieved a certain level of “success” when we can entertain the idea of taking down a wall or running a speaker system to every room in the house.  To some degree, the online equivalent is to have our own address, or in web-speak, our own domain.  &lt;/p&gt;
@@ -318,7 +318,6 @@
 &lt;p&gt;I finally gathered up the courage, and I don’t know why I didn’t do this sooner.  It was so easy, but I have to attribute most of the ease to the four tools I used: Google Apps, GitHub Pages, Jekyll, and DNSimple.  So, I am now running two of my own personal domain with website, email, blogging, calendar, etc. for $3/month plus domain registration costs (under $10/year each).  All of these services are fairly well-documented, so I won’t go into detail about how to set them up unless I get lots of requests to do so. However, I will say that I attribute most of my courage to finally pull the trigger to DNSimple’s “One-Click Services” feature, which made all the DNS work painless.  Well-played, DNSimple (and no, I’m not affiliated). &lt;em&gt;golf clap&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Now what was I going to do again?  Oh yes, start blogging…&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 07 Feb 2014 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2014/02/07/king-of-my-own-domain-on-a-paupers-budget.html</link>

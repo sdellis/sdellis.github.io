@@ -13,7 +13,7 @@ Since we are "cleaning up" the extensive METS data to make it "presentable" on t
 rails new spiiiffy
 {% endhighlight %}
 
-Spiiiffy will need to take a URL that provides a METS document, use the nokogiri to parse the XML data, and use the osullivan gem to create the Presentation API manifest structure.  Then it will need to store both datastreams and deliver either depending on the request.
+Spiiiffy will need to take a URL that provides a METS document, use the nokogiri gem to parse the XML data, and use the osullivan gem to create the Presentation API manifest structure.  Then it will need to store both datastreams and deliver either depending on the request.
 
 So we modify our Gemfile by adding these lines:
 

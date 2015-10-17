@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "King of My Own Domain On a Pauper’s Budget"
+title:  "Publish a Website With a Custom Domain On a Shoestring"
 date:   2014-02-07 14:29:20
 categories: tech blogging
 ---
@@ -16,4 +16,3 @@ One of my New Year’s resolutions was to journal about my experiences and inter
 I finally gathered up the courage, and I don’t know why I didn’t do this sooner.  It was so easy, but I have to attribute most of the ease to the four tools I used: Google Apps, GitHub Pages, Jekyll, and DNSimple.  So, I am now running two of my own personal domain with website, email, blogging, calendar, etc. for $3/month plus domain registration costs (under $10/year each).  All of these services are fairly well-documented, so I won't go into detail about how to set them up unless I get lots of requests to do so. However, I will say that I attribute most of my courage to finally pull the trigger to DNSimple's "One-Click Services" feature, which made all the DNS work painless.  Well-played, DNSimple (and no, I'm not affiliated). _golf clap_
 
 Now what was I going to do again?  Oh yes, start blogging...
-
