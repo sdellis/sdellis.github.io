@@ -6,7 +6,7 @@ permalink: /cv/
 {::options parse_block_html="true" /}
 <section id="intro">
 ## Senior Full Stack Developer, Front-End Emphasis
-609.933.7442 &bull; shaun@sdellis.com
+609.933.7442 &bull; shaun@sdellis.com &bull; [GitHub](https://github.com/sdellis)
 
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
 software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
