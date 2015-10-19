@@ -10,8 +10,8 @@ permalink: /cv/
 
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
 software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
-the design and creation of of tools that help us explore the relationships and patterns among data that only computers can help us discover.  My bachelors degree has given me a deep understanding of the history and practice of art and design, while years
-of programming practice, a Masters in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.  
+the design and creation of of tools that help us explore the relationships and patterns among data that only computers can help us discover.  My Bachelor's degree has given me a deep understanding of the history and practice of art and design, while years
+of programming practice, a Master in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.  
 </section>
 <section id="skills">
 ## SKILLS
@@ -40,6 +40,7 @@ of programming practice, a Masters in Library and Information Science, and ten y
 
 * 4.0 cumulative GPA
 * Organized [Ethnographic Research Project](http://sdellis.com/docs/ethnographic_research_project.pdf) to inform design of Rutgers RUAnalytic
+* My [Information Visualization Class Project](https://sites.google.com/site/visualizingahit/home) was featured on [NBC News Blog](http://www.nbcnewyork.com/blogs/nonstop-sound/Rutgers-Researchers--124654364.html) and [Slashdot](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song)
 
 ### B.F.A., 1993-1997, Rutgers University <br/>[Mason Gross School of the Arts](http://www.masongross.rutgers.edu/), <br/>[Media concentration](http://www.masongross.rutgers.edu/visual-arts/programs/bfa)
 
