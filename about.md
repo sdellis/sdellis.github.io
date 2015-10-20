@@ -104,6 +104,6 @@ requirements, manage expectations, and provide status reports throughout develop
 <div class="section-content">
 * I am a songwriter and multi-instrumentalist, proficient in [guitar](http://shaunellis.bandcamp.com/track/test-my-luck), [mandolin](https://soundcloud.com/shaun-ellis-7/sets/soundtrack-for-croquet), [piano](https://soundcloud.com/shaun-ellis-7/13-streets-of-berlin), and more.
 * I am an [artist](https://instagram.com/explore/tags/sdellisart/), with my favorite mediums being pencil, pen and ink, silkscreen, and watercolor.
-* I've begun to tinker with [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs).
+* I've started tinkering with [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs).
 </div>
 </section>
