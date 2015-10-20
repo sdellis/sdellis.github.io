@@ -8,5 +8,16 @@ url: "http://sdellis.com" # the base hostname & protocol for your site
 twitter_username: sdellis
 github_username:  sdellis
 
+collections:
+  labs:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: labs
+    values:
+      layout: experiment
+
 # Build settings
 markdown: kramdown
