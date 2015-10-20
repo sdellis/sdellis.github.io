@@ -11,7 +11,7 @@ permalink: /cv/
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
 software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
 the design and creation of of tools that help us explore the relationships and patterns among data that only computers can help us discover.  My Bachelor's degree has given me a deep understanding of the history and practice of art and design, while years
-of programming practice, a Master in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.  
+of programming practice, a Master in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.
 </section>
 <section id="skills">
 ## SKILLS
@@ -97,5 +97,13 @@ requirements, manage expectations, and provide status reports throughout develop
 * Provided hosting, design, and programming services to nearly 30 clients
 * Hired additional contract employees when needed
 * Developed and supported a variety of Web solutions including fully-equipped e-commerce sites,course registration systems, collaboration portals, and content management systems.
+</div>
+</section>
+<section id="hobbies">
+## RELATED HOBBIES
+<div class="section-content">
+* I am a songwriter and multi-instrumentalist, proficient in [guitar](http://shaunellis.bandcamp.com/track/test-my-luck), [mandolin](https://soundcloud.com/shaun-ellis-7/sets/soundtrack-for-croquet), [piano](https://soundcloud.com/shaun-ellis-7/13-streets-of-berlin), and more.
+* I am an [artist](https://instagram.com/explore/tags/sdellisart/), with my favorite mediums being pencil, pen and ink, silkscreen, and watercolor.
+* I've begun to tinker with [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs).
 </div>
 </section>
