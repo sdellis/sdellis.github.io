@@ -54,7 +54,8 @@ $.widget("pul.prospero", {
     $.ajax({
       url: this.options.endpoint + this.options.manifestUri,
       contentType: "application/json",
-      method: "PUT",
+      method: "POST",
+      headers: {"X-HTTP-Method-Override": "PUT"},
       data: payload,
       success: function(data, textStatus, jqXHR) {
         console.log("success!");
