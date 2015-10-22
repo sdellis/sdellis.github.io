@@ -8,7 +8,7 @@ This is a simple proof of concept for editing a IIIF Presentation API Manifest. 
 
 {::options html_to_native="true" /}
 
-
+<div class="container" style="max-width:800px">
     <div id="notice" class="alert-info"></div>
     <h3 id="title"></h3>
     <div class="row">
@@ -16,6 +16,6 @@ This is a simple proof of concept for editing a IIIF Presentation API Manifest. 
 
       </div>
     </div>
-
+</div>
 
 <script src="{{ "/js/prospero.js" | prepend: site.baseurl }}">
