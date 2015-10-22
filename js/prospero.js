@@ -82,7 +82,7 @@ $.widget("pul.prospero", {
 var book = $("<div></div>")
   .appendTo("body")
   .prospero({
-    endpoint: "http://iiif-manifesto.herokuapp.com/collections/manifests/",
+    endpoint: "http://45.55.133.0:3000/collections/manifests/",
     manifestUri: "puls:00pvh",
     complete: function(event, data) {
       $("#notice").text("Complete!");
