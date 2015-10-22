@@ -10,7 +10,7 @@ permalink: /cv/
 
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
 software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
-the design and creation of of tools that help us explore the relationships and patterns among data that only computers can help us discover.  My Bachelor's degree has given me a deep understanding of the history and practice of art and design, while years
+creating tools that help us explore the relationships and patterns among data that only computers can help us discover.  My Bachelor's degree has given me a deep understanding of the history and practice of art and design, while years
 of programming practice, a Master in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.
 </section>
 <section id="skills">
@@ -68,6 +68,8 @@ of programming practice, a Master in Library and Information Science, and ten ye
 * Designed the [Versailles on Paper exhibition site](http://rbsc.princeton.edu/versailles/versailles-paper), among other exhibition sites, and wrote a [Drupal module](https://www.drupal.org/sandbox/sdellis/2421047) allowing easy integration of IIIF-compliant images and manuscripts into Drupal.
 * Wrote UI Spec for the [Blue Mountain project](http://bluemountain.princeton.edu/index.html), including ["shovel-ready" HTML wireframes](https://github.com/sdellis/bluemountain) and the scaffolding of a [REST API](http://sdellis.com/docs/blue_mountain_ui_spec.pdf).
 * Currently co-organizing [Code4Lib 2016](http://2016.code4lib.org/). Website designer, Local Planning Committee member, and Sponsorship Committee chair.
+* Served a two year term on the Library Education and Training Committee (LETC)
+* Currently serve in advisory role on the Website Steering Group, and transitioned the group to develop using an Agile methodology
 
 ### Web Applications Developer <br/>Princeton University Office of Development, 2009 - 2010
 * Aided with development of a system for fundraisers to obtain key information necessary to secure large gifts to the University. System also allows managers to track fundraiser success and progress. Recipient of two [CASE Gold Awards](http://www.princeton.edu/main/news/archive/S28/38/87G73/index.xml).
@@ -105,6 +107,6 @@ requirements, manage expectations, and provide status reports throughout develop
 <div class="section-content">
 * I am a songwriter and multi-instrumentalist, proficient in [guitar](http://shaunellis.bandcamp.com/track/test-my-luck), [mandolin](https://soundcloud.com/shaun-ellis-7/sets/soundtrack-for-croquet), [piano](https://soundcloud.com/shaun-ellis-7/13-streets-of-berlin), and more.
 * I am an [artist](https://instagram.com/explore/tags/sdellisart/), with my favorite mediums being pencil, pen and ink, silkscreen, and watercolor.
-* I've started tinkering with [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs).
+* I tinker with Arduinos and [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs) using the [Johnny-Five JavaScript Robotics Framework](http://johnny-five.io/).
 </div>
 </section>
