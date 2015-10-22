@@ -5,7 +5,7 @@ permalink: /labs/manifest-editor/
 ---
 {::options html_to_native="true" /}
 
-<div class="container">
+
     <div id="notice" class="alert-info"></div>
     <h3 id="title"></h3>
     <div class="row">
@@ -13,6 +13,6 @@ permalink: /labs/manifest-editor/
 
       </div>
     </div>
-</div>
+
 
 <script src="{{ "/js/prospero.js" | prepend: site.baseurl }}">
