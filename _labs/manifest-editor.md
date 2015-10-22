@@ -3,6 +3,9 @@ layout: experiment
 title: Manifest-Editor
 permalink: /labs/manifest-editor/
 ---
+## Manifest Drag 'n Drop Editor
+This is a simple proof of concept for editing a IIIF Presentation API Manifest.  Drag images around to reorder them in this manifest.  As soon as the image location changes, an AJAX request is sent to the remote data store.  You can test the "save" by refreshing the page.  The remote data store is built using Express, a Node.js server, and MongoDB.  The client is built using the jQueryUI Widget Factory.  This collection of images comes from Princeton University Library's [Digital Archive of Latin American and Caribbean Ephemera](http://lae.princeton.edu).
+
 {::options html_to_native="true" /}
 
 
