@@ -6,20 +6,9 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 30 Oct 2015 15:15:18 -0400</pubDate>
-    <lastBuildDate>Fri, 30 Oct 2015 15:15:18 -0400</lastBuildDate>
+    <pubDate>Fri, 30 Oct 2015 15:32:12 -0400</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2015 15:32:12 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
-    
-      <item>
-        <title>Badges Of Distinction</title>
-        <description>
-</description>
-        <pubDate>Mon, 26 Oct 2015 00:00:00 -0400</pubDate>
-        <link>http://sdellis.com/2015/10/26/badges-of-distinction.html</link>
-        <guid isPermaLink="true">http://sdellis.com/2015/10/26/badges-of-distinction.html</guid>
-        
-        
-      </item>
     
       <item>
         <title>How to Generate IIIF Manifests from METS with oSullivan</title>
