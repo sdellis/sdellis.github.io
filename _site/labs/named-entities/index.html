@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Labs</title>
+    <title>Named-Entity-Checker</title>
     <meta name="description" content="Creative polymath with iconoclastic tendencies.
 ">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://sdellis.com/labs/">
+    <link rel="canonical" href="http://sdellis.com/labs/named-entities/">
     <link rel="shortcut icon" href="favicon.ico">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -65,17 +65,42 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Labs</h1>
+    <h1 class="post-title"></h1>
   </header>
 
   <article class="post-content">
-    <p>This is where I put my exshperiments…</p>
+    <h2 id="named-entity-checker">Named Entity Checker</h2>
+<p>This week, I stumbled upon the <a href="http://nytlabs.com/projects/editor.html">New York Times Labs Editor experiment</a> and have become inspired by the possibilities it presents in the realm of Libraries, Archives, and the Digital Humanities domain.  I had just finished up a small project where <a href="http://transcribe.princeton.edu/">students transcribe accounts of explorers and settlers of the American West</a>, which required some interface design for “crowd-sourced” transcription. I am also aware of the challenges of text-based encoding for which tagging or marking up text by hand can be prohibitively expensive.</p>
 
-<ul>
-  <li><a href="named-entities">Real-time Named Entity Checker</a></li>
-  <li><a href="manifest-editor">Drag ‘n Drop Manifest Editor for Reordering Images</a></li>
-  <li><a href="freelapse">Freelapse: make stop-action GIFs with your webcam!</a></li>
-</ul>
+<p>So, why not follow the Times lead and apply the innovations they are working on for their journalists to the interfaces that we develop for crowdsourcing transcription?  Interface theorist and iconoclast, Bret Victor, <a href="https://vimeo.com/36579366">talks about the benefits of creating smaller feedback loops in the creation process</a>, and this is an example of that principle in transcription interfaces.  I put together a simple experiment to test out <a href="https://github.com/spencermountain/nlp_compromise">nlp.js</a>, a Natural Language Processing library written in JavaScript.</p>
+
+<hr />
+
+<div class="container" style="margin-top:20px; max-width:600px;">
+  <div id="entities">
+    <h3 id="this-interface-will-identify-named-entities-as-you-type">This interface will identify "named entities" as you type.</h3>
+    <textarea class="input" style="width:100%; height:150px">Oh I am so sad! The thought that I must leave my dear friends in Delton makes me almost sick--My brain seems oppressed and my heart sick. Mrs. Barlow and Henry are all very dear to me.
+    </textarea>
+    <div class="result" style="font-size:10px;"></div>
+  </div>
+</div>
+
+<script>
+
+$("#entities").find("textarea").keyup(function(){
+  var txt=$(this).val() || ''
+  var data= nlp.spot(txt)
+  console.log(data)
+  var html= data.map(function(p){
+    return "<div style='background:yellowgreen; font-size:30px; display:inline-block; color:white; margin:5px; padding:8px;'>"+p.normalised+"</div>"
+  }).join(" ")
+  $(this).siblings(".result").html(html)
+})
+
+</script>
+
+<script src="/js/nlp.js">
+</script>
 
   </article>
 
