@@ -5,7 +5,7 @@ date:   2015-10-30 14:29:20
 categories: tech blogging design
 ---
 
-[Code4Lib](http://2016.code4lib.org) has been putting on conferences for over a decade, and this year I have the opportunity to be one of the key organizers.  The popularity of the annual conference has grown every year, and we expect to max out at 450 attendees this year. What is unique about Code4Lib is that there is no organization.  There is no leadership or hierarchy.  There is no "headquarters" or geographical ties.  There is no legal entity.  It's just a name that refers to a widely distributed group of people -- a large and ever expanding group of people -- who are interested in open source technology solutions to library, museum, and archives problems. Any effort that is expended on Code4Lib is 100% volunteer driven.  In short, Code4Lib is an anarchy, in the best sense of the word.
+[Code4Lib](http://2016.code4lib.org) has been putting on conferences for over a decade, and this year I have the opportunity to be among the key organizers.  The popularity of the annual conference has grown steadily over the years, and we expect to max out at 450 attendees this year. What is unique about Code4Lib is that there is no organization.  There is no leadership or hierarchy.  There is no "headquarters" or geographical ties.  There is no legal entity.  It's just a name that refers to a widely distributed group of people -- a large and ever expanding group of people -- who are interested in open source technology solutions to library, museum, and archives problems. Any effort that is expended on Code4Lib is 100% volunteer driven.  In short, Code4Lib is an anarchy, in the best sense of the word.
 
 ![Code4Lib 2016 Conference website landing page](/img/c4l_site.jpg)
 
