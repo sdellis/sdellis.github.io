@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Anarchists' Playbook"
+title:  "Anarchists' Codebook"
 date:   2015-10-30 14:29:20
 categories: tech blogging design
 ---
