@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Pattern Libraries"
+date:   2015-11-10 14:29:20
+categories: tech blogging design
+---
+
+Small, reusable piece or building block.
+
+Building methods
+  Set Defaults
+    - basic, no settings
+  Define options
+    - highlight, icon, large, inverted
+  Loop through Theme object... ?
+
+  How to identify patterns/components
+    -Identify Commonalities
+
+Use a taskrunner
+HTML templates of components and sample Pages
+    prototype page for each component
+    sample template pages to test "real life" application
+SASS for styles (your library)
+
+Patternlab.io (node)
+  Use Foundation or Bootstrap for certain things (grid)
+  Use Patternlab for other things
+
+Theming
+  each theme in themes (SASS)
+
+Tools and Frameworks
+  Use CSS Frameworks - Foundation or Bootstrap
+  Reset
+  Cherry-pick useful pieces
+  Don't waste time overriding your framework
+
+
+
+Pros and Cons
+  Scale vs. Flexibility issue
+  Takes a lot of time.

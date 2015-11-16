@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-
+<div id="main">
+</div>
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
@@ -14,6 +15,7 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <p>{{ post.summary }}</p>
       </li>
     {% endfor %}
   </ul>

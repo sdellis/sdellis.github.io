@@ -6,13 +6,13 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 30 Oct 2015 17:09:28 -0400</pubDate>
-    <lastBuildDate>Fri, 30 Oct 2015 17:09:28 -0400</lastBuildDate>
+    <pubDate>Mon, 16 Nov 2015 12:40:35 -0500</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2015 12:40:35 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Anarchists&#39; Playbook</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://2016.code4lib.org&quot;&gt;Code4Lib&lt;/a&gt; has been putting on conferences for over a decade, and this year I have the opportunity to be one of the key organizers.  The popularity of the annual conference has grown every year, and we expect to max out at 450 attendees this year. What is unique about Code4Lib is that there is no organization.  There is no leadership or hierarchy.  There is no “headquarters” or geographical ties.  There is no legal entity.  It’s just a name that refers to a widely distributed group of people – a large and ever expanding group of people – who are interested in open source technology solutions to library, museum, and archives problems. Any effort that is expended on Code4Lib is 100% volunteer driven.  In short, Code4Lib is an anarchy, in the best sense of the word.&lt;/p&gt;
+        <title>Anarchists&#39; Codebook</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://2016.code4lib.org&quot;&gt;Code4Lib&lt;/a&gt; has been putting on conferences for over a decade, and this year I have the opportunity to be among the key organizers.  The popularity of the annual conference has grown steadily over the years, and we expect to max out at 450 attendees this year. What is unique about Code4Lib is that there is no organization.  There is no leadership or hierarchy.  There is no “headquarters” or geographical ties.  There is no legal entity.  It’s just a name that refers to a widely distributed group of people – a large and ever expanding group of people – who are interested in open source technology solutions to library, museum, and archives problems. Any effort that is expended on Code4Lib is 100% volunteer driven.  In short, Code4Lib is an anarchy, in the best sense of the word.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/c4l_site.jpg&quot; alt=&quot;Code4Lib 2016 Conference website landing page&quot; /&gt;&lt;/p&gt;
 
@@ -20,7 +20,7 @@
 
 &lt;p&gt;And while I find it amazing that we continue to put on great conferences, publish an academic journal, and serve as a kind of technical help-desk for our peers, this lack of structure has made it increasingly challenging for conference organizers.  One of the big problems is that we can’t pay for stuff on our own.  We depend on finding a fiscal host each year to sign contracts and make up-front payments.  We also depend on sponsors to help keep the registration costs down, and make the conference experience as enjoyable as possible.  Up until recently we depended on volunteers to host our conference website.&lt;/p&gt;
 
-&lt;p&gt;We are incredibly grateful to the folks at Oregon State University (OSU) who have been volunteering for over ten years to host our site, but the downside is that they have day jobs just like the rest of us.  As a result, Code4Lib comes no where close to a priority among all the demands of anyone’s employer.  As any web developer knows, no public-facing app is ever safe from security threats, updates, patches, and just plain old evolving trends and standards that make a site feel relevant.  This poses a problem because a distributed community cannot have a single point of failure.  We cannot put the kind folks at OSU in the position of subservience to the group.  At the same time, we need to move forward, and it’s hard to get sponsors for a technology conference when the looks and performs in a way that was cutting edge ten years ago.&lt;/p&gt;
+&lt;p&gt;We are incredibly grateful to the folks at Oregon State University (OSU) who have been volunteering for over ten years to host our site, but the downside is that they have day jobs just like the rest of us.  As a result, Code4Lib comes no where close to a priority among all the demands of anyone’s employer.  As any web developer knows, no public-facing app is ever safe from security threats, updates, patches, and just plain old evolving trends and standards that make a site feel relevant.  This poses a problem because a distributed community cannot have a single point of failure.  We cannot put the kind folks at OSU in the position of subservience to the group.  At the same time, we need to move forward, and it’s hard to get sponsors for a technology conference when the site looks and performs in a way that does not meet modern standards and conventions.&lt;/p&gt;
 
 &lt;p&gt;A redesign was in order.  Our goals were to:&lt;/p&gt;
 
@@ -49,8 +49,8 @@
 &lt;p&gt;Nothing’s perfect, and there’s still some technical overhead, but this will be by far the most usable Code4Lib conference site to date.  If it’s any proof, we’ve already added a number of sponsors who knew nothing about Code4Lib until this year.  It’s not easy to try to change things in a space without authority. But if, as Eric Schmidt said, the Internet is the largest experiment in anarchy we’ve ever had, Code4Lib fully embodies that spirit.  &lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2015 10:29:20 -0400</pubDate>
-        <link>http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-playbook.html</link>
-        <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-playbook.html</guid>
+        <link>http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</link>
+        <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</guid>
         
         
         <category>tech</category>
@@ -303,8 +303,11 @@
       </item>
     
       <item>
-        <title>On Booking</title>
-        <description>&lt;p&gt;As I have many interests, I don’t always write about technology.  Here’s something of a friendly rant I spun out after a friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon in my area.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon’s lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It’s a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I’ve gathered over the years.&lt;/p&gt;
+        <title>On Booking and Recruitment: Talent Is Your Clientele</title>
+        <description>&lt;p&gt;As I have many interests, I don’t always write about technology.  However, this friendly rant could be applied to a successful web development shop as well. The gist of this post could be boiled down to this: your talent is really your clientele.  Without great talent, who also know other talent, you will never get off the ground.  When a friend recently asked me for advice on booking musical entertainment.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon’s lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It’s a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I’ve gathered over the years.  If you could care less about live music, but manage a team of web professionals, swap out “musician” with “developer”.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/22037640?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://vimeo.com/22037640&quot;&gt;&quot;Dance with Me&quot; - Performed by John Beacher and Louis Sparre at Soupcon Salon 4.4.11&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/tweed&quot;&gt;TWEED VIDEO&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;musicians-first&quot;&gt;Musicians First!&lt;/h2&gt;
 &lt;p&gt;It may seem paradoxical, but when running a music venue, your clientele are not the patrons, the musicians are.  Musicians get treated like crap.  I can only imagine the thinking behind this is that we are a dime a dozen.  Everyone plays music these days, and many folks will play for free just to get heard.  The idea that musicians are expendable is the kiss of death for any entertainment venue.&lt;/p&gt;

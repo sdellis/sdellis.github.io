@@ -1,11 +1,16 @@
 ---
 layout: post
-title:  "On Booking"
+title:  "On Booking and Recruitment: Talent Is Your Clientele"
 date:   2014-07-12 08:53:05
 categories: music blogging
+summary: "As I have many interests, I don’t always write about technology. However, this friendly rant could be applied to a successful web development shop as well. The gist of this post could be boiled down to this: your talent is really your clientele. Without great talent, who also know other talent, you will never get off the ground."
 ---
 
-As I have many interests, I don't always write about technology.  Here's something of a friendly rant I spun out after a friend recently asked me to join her in a proposal to manage the entertainment aspect of a club that will be opening soon in my area.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon's lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It's a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I've gathered over the years.
+As I have many interests, I don't always write about technology.  However, this friendly rant could be applied to a successful web development shop as well. The gist of this post could be boiled down to this: your talent is really your clientele.  Without great talent, who also know other talent, you will never get off the ground.  When a friend recently asked me for advice on booking musical entertainment.  She admired the work I did with Soupçon Salon, a successful local supper and music club that I ran for over five years.  We experimented and tweaked our approach throughout Soupçon's lifespan, but much of the formula for our success was influenced by my experiences over the years as a working musician.  It's a dream of mine to be able to book quality acts for an awesome venue, so here are some crumbs of wisdom I've gathered over the years.  If you could care less about live music, but manage a team of web professionals, swap out "musician" with "developer".
+
+{::options html_to_native="true" /}
+<iframe src="https://player.vimeo.com/video/22037640?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/22037640">&quot;Dance with Me&quot; - Performed by John Beacher and Louis Sparre at Soupcon Salon 4.4.11</a> from <a href="https://vimeo.com/tweed">TWEED VIDEO</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ## Musicians First!
 It may seem paradoxical, but when running a music venue, your clientele are not the patrons, the musicians are.  Musicians get treated like crap.  I can only imagine the thinking behind this is that we are a dime a dozen.  Everyone plays music these days, and many folks will play for free just to get heard.  The idea that musicians are expendable is the kiss of death for any entertainment venue.

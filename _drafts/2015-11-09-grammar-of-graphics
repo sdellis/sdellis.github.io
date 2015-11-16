@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "The Grammar of Graphics"
+date:   2015-11-09 14:29:20
+categories: tech blogging design
+---
+
+Grammar is rules for art and science. Grammar is also a formal system of rules
+for generating lawful statements in a language.
+
+Graphics are symbolic tools for representing abstractions.
+
+Aesthetics, in the original Greek sense, offers principles for relating sensory
+attributes (color, shape, sound, etc.) to abstractions
+
+OOD is a natural framework for thinking about
+graphics because graphics are objects (Hurley and Oldford, 1991).
+Defining objects helps organize thoughts.
+
+A graph is a set of points. A mathematical graph cannot be seen. It is an abstraction.
+A graphic, on the other hand, is a physical representation of a graph.
+This representation is accomplished by realizing graphs with aesthetic attributes
+such as size or color.
+
+If the messages between these objects follow a simple grammar, then they will behave
+consistently and flexibly. To introduce this idea, I will focus on three stages of
+graphic creation:
+1) Specification
+2) Assembly
+3) Display
+
+A graphic, unlike a picture, has a highly organized and constrained set of rules.
+
+## Specifications
+Statistical graphic specifications are expressed in seven components:
+1) DATA: a set of data operations that create variables from datasets,
+2) TRANS: variable transformations (e.g., rank),
+3) FRAME: a set of variables, related by operators, that define a space,
+4) SCALE: scale transformations (e.g., log),
+5) COORD: a coordinate system (e.g., polar),
+6) GRAPH: graphs (e.g., points) and their aesthetic attributes (e.g., color),
+7) GUIDE: one or more guides (axes, legends, etc.).
+
+Example for comparison of Birth and Death rates in different countries:
+
+FRAME: birth*death
+GRAPH: point(size(O), label(country))
+GRAPH: contour.density.kernel.epanechnikov.joint(color.hueO)
+GUIDE:jorm.line(position«O,O),(30,30)), label("Zero Population Growth"))
+GUIDE: axis} (label("Birth Rate"))
+GUIDE: axis2(label("Death Rate"))
+
+For some time, I have wanted to build a variation on a slideshow-style app similar to PowerPoint.  I am not a fan of PowerPoint because it requires too much user interaction, and it promotes sloppy thinking and communication due to the model of encapsulating a concept/point into a single canvas.  What would be a better approach would be to allow the user to make a point and then optimize the number of based on customizable legibility rules and display styles.
+
+I also have some selfish reasons for coming up with such a program.  I am a musician and often rehearse sets of music with a group of other musicians who are following along in accompaniment. We are usually following the same chart, which may contain lyrics and some form of musical notation.  I find it strikingly similar to software used to make presentations to a distributed audience, where the presenter (or some designated person) controls what the audience sees.
+
+Likewise, a musical *set* is very much like a *presentation* in that you have a collection of arguments that together serve an overall goal.  I often equate presentations with essays in the sense that they aim to convince the reader of a particular world-view (Berger, Ways of Seeing?).  I find that a set has a central goal that also guides a musician when curating and ordering songs in a set, just as a presenter must present their ideas in an order that makes the most sense to the audience.  For example, songs selected for a wedding context would be very different from those selected for a coffeehouse context.  The theme for a wedding context may be danceable and popular songs around the concept of love, while a coffee house context may lean more heavily on reflective, poetic original material.
+
+If sets are like presentations and songs are like arguments, then we can extend the metaphor further and say that *stanzas* are *reasons/ideas* and *lines* are *statements*.  What is interesting about this approach is that one could transform a well-structured essay into a presentation with very little human interaction.  When giving a presentation, you want to minimize the number of screens necessary to present all the information the audience needs to follow the argument, which usually means all the reasons given for the argument and any data used for proof of the statements.
+
+It's not always possible to provide all the data for an argument on a single canvas in a legible way.  In these instances, we need the program to split the argument into separate canvases in a way that makes sense to the audience.  If there is no notion of a split canvas, then you will require more complicated user interaction to display the data, such as scrolling to the appropriate place.
+
+So the purpose of the presentation program, which I'm calling Platonic (or Mancible?), is to present a series of arguments, with each argument legible using the smallest number of canvases.  The amount of user interaction should also be minimized to view an entire argument.  With very little extra effort, one could create a fakebook program, perhaps called Bard (or Squire?), which presents a series of songs
+
+What does "legible" mean?  It will change with the context... In the sense that software should minimize interactivity by making guesses about context and environment,
