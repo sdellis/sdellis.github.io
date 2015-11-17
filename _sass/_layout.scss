@@ -255,6 +255,7 @@ div .section-content {
   background: url(../img/sdellis_edui_cropped.jpg) top no-repeat;
   @media screen and (min-width: 360px) {
     background: url(../img/sdellis_edui.jpg) top no-repeat;
+    background-size: cover;
   }
   background-size: cover;
   color: #fff;

@@ -329,7 +329,8 @@ div .section-content {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); }
   @media screen and (min-width: 360px) {
     #main {
-      background: url(../img/sdellis_edui.jpg) top no-repeat; } }
+      background: url(../img/sdellis_edui.jpg) top no-repeat;
+      background-size: cover; } }
 
 /**
  * Syntax highlighting styles
