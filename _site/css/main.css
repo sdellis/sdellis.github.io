@@ -44,6 +44,14 @@ figure > img {
 figcaption {
   font-size: 14px; }
 
+.caption {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  line-height: 18px;
+  padding: 10px;
+  display: inline-block; }
+
 /**
  * Lists
  */

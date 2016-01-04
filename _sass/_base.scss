@@ -58,7 +58,14 @@ figcaption {
     font-size: $small-font-size;
 }
 
-
+.caption {
+  font-style:italic;
+  font-size: $small-font-size;
+  color: #666;
+  line-height: 18px;
+  padding: 10px;
+  display: inline-block;
+}
 
 /**
  * Lists

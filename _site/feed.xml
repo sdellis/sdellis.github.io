@@ -6,9 +6,70 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 16 Nov 2015 21:09:35 -0500</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 21:09:35 -0500</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 20:02:51 -0500</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 20:02:51 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Introducing Tabula Rasa</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/sdellis/tabula-rasa&quot;&gt;Tabula Rasa&lt;/a&gt; is a node.js “base library” for working with &lt;a href=&quot;http://iiif.io/api/presentation/2.0/&quot;&gt;IIIF Presentation API&lt;/a&gt; resources (i.e., collections, manifests, canvases, etc.). It was originally developed for &lt;a href=&quot;https://github.com/sdellis/tabula&quot;&gt;Tabula&lt;/a&gt;, a “starter kit” for building all sorts of useful native web apps that work with IIIF APIs. However, it can just as easily be used on the server to create and edit IIIF Presentation API resources.&lt;/p&gt;
+
+&lt;p&gt;Tabula Rasa uses &lt;a href=&quot;https://ampersandjs.com/&quot;&gt;Ampersand.js&lt;/a&gt; models and collections to make writing client side IIIF applications as simple as possible.  Ampersand is based heavily on Backbone.js, and anyone familiar with Ruby on Rails (or any other MVC framework) will also be very comfortable using it.  It is a npm module (node for “ruby gem”), making it super easy to bundle into browser-based apps built with Webpack.  It is also future-ready since it’s written in ES2015, and has ever-growing test coverage.&lt;/p&gt;
+
+&lt;h2 id=&quot;show-dont-tell&quot;&gt;Show, Dont’ Tell.&lt;/h2&gt;
+&lt;p&gt;Tabula got its name because it is intended to emphasize evidence in slideshow presentations.  The name &lt;em&gt;tabula&lt;/em&gt; (latin for slate or tablet) was selected as a “namespace” for a suite of similar applications because it is a tablet with many possibilities.  The notion of &lt;em&gt;tabula rasa&lt;/em&gt; (“clean state” or “blank tablet”) connotes a view of mind as originally blank, on which experience leaves marks.  This notion is the basis of Empiricism and ultimately, the scientific method.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/bacon-aphorism.jpg&quot; alt=&quot;&amp;quot;Aphorism I.&amp;quot;&amp;quot; From Bacon&#39;s Novum organum (1620).&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;“Man, being the servant and interpreter of Nature, can do and understand so much and so much only as he has observed in fact or in thought about the order of Nature: beyond this he neither knows anything nor can do anything.”- Sir Francis Bacon, “Aphorism I.” From Novum organum (1620).&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;If Empiricism is true, then it must be possible to learn anything. As an artist who learned to draw from &lt;a href=&quot;http://www.amazon.com/Drawing-Right-Side-Brain-Definitive/dp/1585429201&quot;&gt;a book&lt;/a&gt;, and has read about &lt;a href=&quot;https://en.wikipedia.org/wiki/Outliers_(book)&quot;&gt;10,000 hours of practice&lt;/a&gt;, I believe it is possible to learn anything regardless of perceived talent. However, finding a good mentor is crucial to growth, and instructional tools, style, and techniques can make a huge difference in cognition and confidence in a field of study.  &lt;/p&gt;
+
+&lt;h2 id=&quot;cognitive-style-in-software&quot;&gt;Cognitive Style in Software&lt;/h2&gt;
+&lt;p&gt;In 2006, Edward Tufte published a &lt;a href=&quot;http://www.edwardtufte.com/tufte/books_pp&quot;&gt;polemic on PowerPoint&lt;/a&gt;, lamenting the fact that the medium had a tendency to hide evidence rather than emphasize it. Tufte argues that PowerPoint imposes a style that reduces the intellectual level of the content passing through the program.  He lists several problems that occur with the default PP presentation format: &lt;em&gt;foreshortening of evidence and thought, low spatial resolution, a hierarchical single-path structure of organization, breaking up of narratives and data into minimal fragments, branding of slides with logos, and a smirky commercialism that turns information into a sales pitch and presenters into marketeers,&lt;/em&gt; to name a few of his criticisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/war-is-peace.jpg&quot; alt=&quot;War is Peace, Freedom is Slavery, Ignorance is Strength&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;“The cognitive style of PowerPoint is familiar to readers of Orwell’s remarkable and prescient novel 1984” - Edward Tufte&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Tufte offers a handful of suggestions for an improved technical reporting tool of the future, such as &lt;em&gt;a variety of page and screen layout templates, publication quality visualizations and data tables, scientific notation and typography, annotated measurement scales in images, open-document non-proprietary formats, and high resolution printing&lt;/em&gt;.  &lt;/p&gt;
+
+&lt;p&gt;Tabula is my attempt to address these suggestions, although Tufte makes a tall order and I am starting with baby steps.  Tabula wasn’t supposed to simply be a starter kit.  In fact, when it is fully compliant with the IIIF specs, I intend to “freeze” it (perhaps with a new name) and move onto my original idea, which is a IIIF-based slideshow application. The first iteration of this slideshow application is meant to emphasize evidence through &lt;strong&gt;four different approaches&lt;/strong&gt;, listed below with possibly more to come.&lt;/p&gt;
+
+&lt;h3 id=&quot;revelation&quot;&gt;1. Revelation&lt;/h3&gt;
+&lt;p&gt;Most people are familiar with the “Ken Burns effect”, the slow image zooming and panning technique that was popularized in the Civil War documentaries. Variations of this technique not only create movement that can hold an audiences’ attention, but they can be used to reveal certain information within a scene, sometimes revealing the bigger picture, and sometimes revealing greater detail.  We can also think of a faster version of this technique as another approach to revelation, serving as a “tour” around details of an image that help us connect the dots of what we are looking at.  Finally, a simple “controlled scroll” could be used to provide a non-slippy interface to a resource that must be larger than the viewport to read comfortably.&lt;/p&gt;
+
+&lt;h3 id=&quot;comparison&quot;&gt;2. Comparison&lt;/h3&gt;
+&lt;p&gt;There are two approaches to comparison of images.  The first is to situate two or more images side by side, making it easy to compare and contrast characteristics. The other is to provide an overlay of images that can be set to have different transparency values. Of course, there’s no reason that the Revelation techniques described above couldn’t be applied to Comparison-based slide templates.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-and-visualization&quot;&gt;3. Data and Visualization&lt;/h3&gt;
+&lt;p&gt;One of the problems with PowerPoint that Tufte points out is the fact that the resolution is too low to reveal any meaningful data, and authors must resort to simple bullet points to get their point across. The ability to add dynamic, interactive visualizations to slides, or to zoom in on high resolution static visualizations is key to emphasizing data and evidence in an argument.&lt;/p&gt;
+
+&lt;h3 id=&quot;dialogue&quot;&gt;4. Dialogue&lt;/h3&gt;
+&lt;p&gt;Finally, the ability to have a discussion through annotations (synchronously or asyncronously) is as important as the ability to observe when it comes to understanding. The ability to filter comments and questions based on reputation, institution, or other criteria can help determine the authority of a commentator. And because citations are “free” and automatic with IIIF resources, we can always gauge the authenticity of the resource and how credible it may be. All slides enable annotations in the form of text, audio, video, and drawing directly on the canvas.&lt;/p&gt;
+
+&lt;p&gt;Making Tabula compliant with IIIF APIs is a huge part of making this a reality.  While the above techniques would be possible without IIIF, and modern slideshow apps like Reveal.js offer more features than PowerPoint, easy access to good content cannot be understated, and that is the promise of IIIF.  The ability to create presentations from interoperable content held at renowned institutions of learning makes it easy for instructors to incorporate centuries of rich cultural and scientific history into their lessons and presentations. (In case there is any question, I should mention that instructors can always add their own non-IIIF content as well.)&lt;/p&gt;
+
+&lt;h2 id=&quot;inventing-the-universe&quot;&gt;Inventing the Universe&lt;/h2&gt;
+&lt;p&gt;Coming full circle, before I could move forward with Tabula, I had to create a base library that would let me (and others) create IIIF collections, manifests, canvases and such on the client simply by a single line in my package.json file.  To be clear, I don’t claim to be inventing the universe on my own here.  There are lots of smart people creating pieces of the puzzle.  For example, &lt;a href=&quot;http://blog.edsilv.com/manifesto/&quot;&gt;Manifesto&lt;/a&gt; is a great client-side library that is also available as a npm module, but it does not yet allow you to create, only read manifests. &lt;a href=&quot;https://github.com/IIIF/iiif-prezi/&quot;&gt;Other&lt;/a&gt; &lt;a href=&quot;https://github.com/IIIF/osullivan/&quot;&gt;libraries&lt;/a&gt; are server-side only.  If I was going to allow people to create slideshows that are IIIF compliant, then I needed to offer a way to do it.  I am happy to introduce Tabula Rasa, a base library for building IIIF-compliant Native Web Apps (aka, single page web apps).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/carl-sagan.jpg&quot; alt=&quot;Carl Sagan&#39;s Apple Pie Recipe&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;“If you want to make an apple pie, you must first invent the universe.” - Carl Sagan&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I was heavily influenced by &lt;a href=&quot;https://joreteg.com/&quot;&gt;Henrik Joreteg’s&lt;/a&gt; book &lt;a href=&quot;http://humanjavascript.com/&quot;&gt;Human JavasScript&lt;/a&gt; when creating Tabula and Tabula Rasa.  Empiricists like me believe that everyone can learn to code, and if you’re just learning to write JavaScript, I cannot recommend this book enough.  Read more about Tabula Rasa on the &lt;a href=&quot;https://github.com/sdellis/tabula-rasa&quot;&gt;GitHub page&lt;/a&gt;, test it out, and let me know what you think. The future is a blank slate!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Dec 2015 09:29:20 -0500</pubDate>
+        <link>http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</link>
+        <guid isPermaLink="true">http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</guid>
+        
+        
+        <category>tech</category>
+        
+        <category>blogging</category>
+        
+        <category>javascript</category>
+        
+        <category>iiif</category>
+        
+      </item>
     
       <item>
         <title>Anarchists&#39; Codebook</title>
