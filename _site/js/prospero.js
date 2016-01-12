@@ -82,7 +82,7 @@ $.widget("pul.prospero", {
 var book = $("<div></div>")
   .appendTo("body")
   .prospero({
-    endpoint: "http://45.55.133.0:3000/collections/manifests/",
+    endpoint: "http://tabula.space/collections/manifests",
     manifestUri: "foo:bar",
     complete: function(event, data) {
       $("#notice").text("Complete!");
