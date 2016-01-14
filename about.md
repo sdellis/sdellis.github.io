@@ -39,7 +39,7 @@ of programming practice, a Master in Library and Information Science, and ten ye
 ### M.L.I.S., 2008-2011, Rutgers University <br/>[School of Communication and Information](http://comminfo.rutgers.edu/), <br/>[Digital Libraries concentration](http://comminfo.rutgers.edu/mi/specializations.html#Digital%20Libraries)
 
 * 4.0 cumulative GPA
-* Organized [Ethnographic Research Project](http://sdellis.com/docs/ellis_ethnography_research_project.pdf) to inform design of Rutgers RUAnalytic, an application for data analysis of video sources
+* Organized [Ethnographic Research Project](http://sdellis.com/docs/ellis_enthnography_research_project.pdf) to inform design of Rutgers RUAnalytic, an application for data analysis of video sources
 * My [Information Visualization Class Project](https://sites.google.com/site/visualizingahit/home) was featured on [NBC News Blog](http://www.nbcnewyork.com/blogs/nonstop-sound/Rutgers-Researchers--124654364.html) and [Slashdot](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song)
 
 ### B.F.A., 1993-1997, Rutgers University <br/>[Mason Gross School of the Arts](http://www.masongross.rutgers.edu/), <br/>[Media concentration](http://www.masongross.rutgers.edu/visual-arts/programs/bfa)
