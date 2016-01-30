@@ -6,7 +6,7 @@ permalink: /cv/
 {::options parse_block_html="true" /}
 <section id="intro">
 ## Senior Full Stack Developer, Front-End Emphasis
-609.933.7442 &bull; shaun@sdellis.com &bull; [GitHub](https://github.com/sdellis)
+609.933.7442 &bull; shaun@sdellis.com &bull; [GitHub](https://github.com/sdellis) &bull; [npm](https://www.npmjs.com/~sdellis)
 
 I am a highly motivated full stack developer with over 15 years of experience designing Web-based
 software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
@@ -17,20 +17,20 @@ of programming practice, a Master in Library and Information Science, and ten ye
 ## SKILLS
 * Semantic accessible HTML5
 * CSS, SCSS, LESS, responsive design
-* JavaScript (native, jQuery, Node/Express.js/npm, Backbone, React/Flux, [Istanbul/Mocha](https://github.com/IIIF/manifesto), Selenium)
+* JavaScript (native, jQuery, Node/Express.js/npm, Backbone/Ampersand, React)
 * Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, Hydra basics)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
-* Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7)
+* Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7 & 8)
 * Graphic Design ([prototyping](https://github.com/sdellis/bluemountain), design systems, Photoshop, Illustrator)
 * [Information Visualization](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song) ([Tableau](https://sites.google.com/site/visualizingahit/results), [Raphael](http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html), d3)
 * Databases & Data Structures (relational/SQL, document-oriented, XML, json, RDF/LinkedData)
 * [REST API Development](http://sdellis.com/docs/blue_mountain_ui_spec.pdf)
 * Knowledge of Metadata Standards (IIIF, RDF/Linked Data, Dublin Core, METS, PREMIS, MODS, VRA Core, EAD, SKOS)
-* Test Driven Development & Continuous Integration (mocha, istanbul, rspec, TravisCI)
+* Test Driven Development & Continuous Integration (tape, [Istanbul/Mocha](https://github.com/IIIF/manifesto), phantomJS/SauceLabs, rspec, TravisCI)
 * [UX design](http://journal.code4lib.org/articles/7394), interaction design, [usability testing](http://sdellis.com/docs/pul_website_usability_study.pdf)
 * [Github](https://github.com/sdellis), git workflow
-* Basic knowledge of Solr
-* Automated Deployment (docker, capistrano)
+* Apache Solr
+* Automated Deployment (docker, capistrano, npm/surge.sh)
 * Audio production (Digital Performer, ProTools)
 </section>
 <section id="education">
@@ -102,9 +102,18 @@ requirements, manage expectations, and provide status reports throughout develop
 * Developed and supported a variety of Web solutions including fully-equipped e-commerce sites,course registration systems, collaboration portals, and content management systems.
 </div>
 </section>
+<section id="pro-orgs">
+## PROFESSIONAL ORGANIZATIONS
+<div class="section-content">
+* [Code4Lib](https://github.com/code4lib) (Participant and Contributor as there is no official "membership")
+* [Drupal Association](https://www.drupal.org/user/2804475/) (Individual Member)
+* [Association for Computers and Humanities](http://ach.org/) (Individual Member)
+</div>
 <section id="hobbies">
 ## RELATED HOBBIES
 <div class="section-content">
+* Wrote and maintain [Tabula Rasa](http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html) a node.js “base library” for working with [IIIF Presentation API](http://iiif.io/api/presentation/2.0/) resources.
+* Developing [Tabula](https://github.com/sdellis/tabula), a "starter kit" slideshow native web app that uses IIIF Manifests as a data source with distributed data stores.
 * I am a songwriter and multi-instrumentalist, proficient in [guitar](http://shaunellis.bandcamp.com/track/test-my-luck), [mandolin](https://soundcloud.com/shaun-ellis-7/sets/soundtrack-for-croquet), [piano](https://soundcloud.com/shaun-ellis-7/13-streets-of-berlin), and more.
 * I am an [artist](https://instagram.com/explore/tags/sdellisart/), with my favorite mediums being pencil, pen and ink, silkscreen, and watercolor.
 * I tinker with Arduinos and [Nodebots](https://www.youtube.com/watch?v=U-bw9VTOnBs) using the [Johnny-Five JavaScript Robotics Framework](http://johnny-five.io/).

@@ -20,6 +20,7 @@ $.widget("pul.prospero", {
     this.request.done(function(jsonLd) {
 
       function paintPages(element, index, array) {
+        if (element.label === undefined) { element.label = 'untitled'; }
         $("<div id='" + index + "' class='thumbnail'></div>")
           .appendTo("#sortable")
           .html("<img src='" +
