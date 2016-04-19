@@ -50,7 +50,7 @@ GUIDE:jorm.line(position«O,O),(30,30)), label("Zero Population Growth"))
 GUIDE: axis} (label("Birth Rate"))
 GUIDE: axis2(label("Death Rate"))
 
-For some time, I have wanted to build a variation on a slideshow-style app similar to PowerPoint.  I am not a fan of PowerPoint because it requires too much user interaction, and it promotes sloppy thinking and communication due to the model of encapsulating a concept/point into a single canvas.  What would be a better approach would be to allow the user to make a point and then optimize the number of based on customizable legibility rules and display styles.
+For some time, I have wanted to build a variation on a slideshow-style app similar to PowerPoint.  I am not a fan of PowerPoint because it requires too much user interaction, and it promotes sloppy thinking and communication due to the model of encapsulating a concept/point into a single canvas.  What would be a better approach would be to allow the user to make a point and then optimize the number of slides based on customizable legibility rules and display styles.
 
 I also have some selfish reasons for coming up with such a program.  I am a musician and often rehearse sets of music with a group of other musicians who are following along in accompaniment. We are usually following the same chart, which may contain lyrics and some form of musical notation.  I find it strikingly similar to software used to make presentations to a distributed audience, where the presenter (or some designated person) controls what the audience sees.
 

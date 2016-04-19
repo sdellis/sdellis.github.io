@@ -6,9 +6,66 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 Jan 2016 10:12:42 -0500</pubDate>
-    <lastBuildDate>Sat, 30 Jan 2016 10:12:42 -0500</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2016 19:49:17 -0500</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2016 19:49:17 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Personal User Interfaces</title>
+        <description>&lt;p&gt;Many years ago, I remember learning about how little data the human mind needs before it starts to fill in the blanks to interpret what it’s seeing. I was introduced to the biological motion demos created by George Mather in an Information Visualization class way back in 2010.  I was disappointed to discover the site that hosts them is no longer available. You can at least &lt;a href=&quot;https://web.archive.org/web/20071212222117/http://www.lifesci.sussex.ac.uk/home/George_Mather/Motion/BM.HTML&quot;&gt;read about the original example&lt;/a&gt;, and through the process I describe in this post (spoiler alert!), I have &lt;a href=&quot;http://codepen.io/sdellis/pen/xVYMJj&quot;&gt;recreated the effect at CodePen&lt;/a&gt; as a “constellation animation”.&lt;/p&gt;
+
+&lt;p data-height=&quot;266&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;xVYMJj&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sdellis&quot; data-embed-version=&quot;2&quot; data-preview=&quot;false&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sdellis/pen/xVYMJj/&quot;&gt;SVG Running Horse Constellation Animation&lt;/a&gt; by Shaun Ellis (&lt;a href=&quot;http://codepen.io/sdellis&quot;&gt;@sdellis&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr style=&quot;margin: 25px 0px 25px 0px;&quot; /&gt;
+
+&lt;h2 id=&quot;the-evolution-of-web-animation&quot;&gt;The Evolution of Web Animation&lt;/h2&gt;
+&lt;p&gt;Animation is a powerful 4th-dimension communication tool that can tell a story, convey meaning, signal transitions, draw attention, and show changes to data over time. Animation on the internet is almost as old as the internet itself, although it’s had a dip in popularity with only a recent resurgence as the interest in Interaction Design has grown.&lt;/p&gt;
+
+&lt;p&gt;Many of us have been doing this long enough to remember the excesses of Macromedia’s (and then Adobe’s) Flash technology. Flash provided simple visual tools for designers to create motion graphics in websites. Animation as a design element was often abused via infamous “splash” pages, blinking icons, and overzealous button states.  More often than not, such gratuitous “bling” got in the way of the users and only worsened Flash’s bad reputation, which along with several other shortcomings – and &lt;a href=&quot;http://www.apple.com/hotnews/thoughts-on-flash/&quot;&gt;one famous snub&lt;/a&gt; – led to Flash’s ultimate demise.&lt;/p&gt;
+
+&lt;p&gt;In the years since there has been a renaissance of open web technologies. I have been eager to test the limits of HTML5 Canvas, CSS, and SVG animations and figured that recreating one of George Mather’s simple animations would be relatively easy to start with. I thought back to the animated dots and how it was essentially a moving constellation.  Then I thought it would be fun to bring the night sky to life by animating custom constellations.&lt;/p&gt;
+
+&lt;p&gt;As I began my research, I stumbled across this animation of a “polylion” (below) and had no idea that the state of JavaScript animation was so sophisticated.  This work used GreenSock’s TweenMax animation library, and I noticed a few other impressive animations that used this library as well and started to play.  I soon realized that the API was conceptually similar to how one might construct animations on Timelines in Flash, but without the interface that came bundled with Flash.&lt;/p&gt;
+
+&lt;p data-height=&quot;266&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;RNLgJP&quot; data-default-tab=&quot;html,result&quot; data-user=&quot;grayghostvisuals&quot; data-embed-version=&quot;2&quot; data-preview=&quot;true&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/grayghostvisuals/pen/RNLgJP/&quot;&gt;SVG Low PolyLion: Animated Polygons&lt;/a&gt; by GRAY GHOST (&lt;a href=&quot;http://codepen.io/grayghostvisuals&quot;&gt;@grayghostvisuals&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr style=&quot;margin: 25px 0px 25px 0px;&quot; /&gt;
+
+&lt;h2 id=&quot;personal-user-interfaces&quot;&gt;Personal User Interfaces&lt;/h2&gt;
+&lt;p&gt;In order to animate my dots, I would need to plot their coordinate values on a X/Y axis, and then plug these into my code.  An animation like I was planning would be impossible to create without a graphical interface and some instant feedback mechanism. Furthermore, in order to get the nuances that I saw in the original animation, I would have to trace the movement of each joint in each frame on top of a moving being!&lt;/p&gt;
+
+&lt;p&gt;I decided that I needed to build an interface that would let me visually plot and animate the dots on top of each frame of an animation. It would need to also allow me to move the dots visually, and would then write the code for me.&lt;/p&gt;
+
+&lt;p&gt;Luckily, I discovered libgif-js and was able to control a GIF animation with “video-like” controls. This worked well as I could step through each frame, but I needed to overlay an SVG canvas that would let me add dots by clicking on the image. I tried to use standard HTML5 and jQuery for this, but working with SVG is a little different from working with standard DOM elements. I had to do some backflips to be able to add SVG dots to the canvas. I also had trouble with HTML5 standard “draggable” commands.  Now that I have discovered GreenSock’s TweenMax has “Draggable” utility, I probably will try using that, but for the initial draft, I used &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The result is &lt;a href=&quot;/labs/animation-tool&quot;&gt;a first pass at a simple user interface to generate my animations&lt;/a&gt;. There are a number of bugs that I need to address, but if you don’t scroll or resize while you are plotting the dots you can quickly make an animation as demonstrated in &lt;a href=&quot;http://quick.as/egr7cbvkx&quot;&gt;this short video&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course, you need to do this for every frame in the sequence, but once you are done, you can click the “Show the Code” button, copy and paste into the appropriate places in &lt;a href=&quot;http://codepen.io/sdellis/pen/EKLqrx&quot;&gt;this Codepen template&lt;/a&gt; and voilà! A constellation animation!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/animation-interface.jpg&quot; alt=&quot;Animation Interface&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;Screen shot of the simple interface tool.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;There are so many ways it can go, but my immediate next steps include refining the interface, adding better styles, and squashing some of the scrolling/resize bugs.  I would also like it to generate the final animation preview right in the interface/app, without having to rely on CodePen.  Adding onion-skinning (increased dot opacity on either side of the current frame) would make it much easier to trace the joints. Obviously, it would be great if people could upload their own GIFs as it doesn’t work cross-domain for security purposes.  Finally, it would be great to extend this beyond dots and allow animators to create layers of polygons and other shapes for expanded design element options.&lt;/p&gt;
+
+&lt;p&gt;The ability to create personal interfaces that simplify your tasks (or even make them possible) is incredibly empowering.  You also don’t always need to make a polished product if it meets your goals and you know how to use it.  Most of us UI developers are so busy developing awesome front ends for others that we forget we can create interfaces for ourselves to get the output we want from the computer.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 14 Apr 2016 09:29:20 -0500</pubDate>
+        <link>http://sdellis.com/tech/blogging/design/2016/04/14/personal-user-interfaces.html</link>
+        <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2016/04/14/personal-user-interfaces.html</guid>
+        
+        
+        <category>tech</category>
+        
+        <category>blogging</category>
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>Introducing Tabula Rasa</title>
@@ -56,7 +113,7 @@
 
 &lt;p&gt;I was heavily influenced by &lt;a href=&quot;https://joreteg.com/&quot;&gt;Henrik Joreteg’s&lt;/a&gt; book &lt;a href=&quot;http://humanjavascript.com/&quot;&gt;Human JavasScript&lt;/a&gt; when creating Tabula and Tabula Rasa.  Empiricists like me believe that everyone can learn to code, and if you’re just learning to write JavaScript, I cannot recommend this book enough.  Read more about Tabula Rasa on the &lt;a href=&quot;https://github.com/sdellis/tabula-rasa&quot;&gt;GitHub page&lt;/a&gt;, test it out, and let me know what you think. The future is a blank slate!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Dec 2015 09:29:20 -0500</pubDate>
+        <pubDate>Wed, 30 Dec 2015 08:29:20 -0600</pubDate>
         <link>http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</guid>
         
@@ -79,7 +136,7 @@
 
 &lt;p&gt;&lt;em&gt;Design for the new Code4Lib Conference site.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;And while I find it amazing that we continue to put on great conferences, publish an academic journal, and serve as a kind of technical help-desk for our peers, this lack of structure has made it increasingly challenging for conference organizers.  One of the big problems is that we can’t pay for even basic things on our own.  In order to put on conferences we must a fiscal host each year to sign contracts and make up-front payments.  We also depend on sponsors to help keep the registration costs down, and make the conference experience as enjoyable as possible.  Up until recently we depended on volunteers to host our conference website.&lt;/p&gt;
+&lt;p&gt;And while I find it amazing that we continue to put on great conferences, publish an academic journal, and serve as a kind of technical help-desk for our peers, this lack of structure has made it increasingly challenging for conference organizers.  One of the big problems is that we can’t pay for even basic things on our own.  In order to put on conferences we must find a fiscal host each year willing to sign contracts and make up-front payments.  We also depend on sponsors to help keep the registration costs down, and make the conference experience as enjoyable as possible.  Up until recently we depended on volunteers to host our conference website.&lt;/p&gt;
 
 &lt;p&gt;We are incredibly grateful to the folks at Oregon State University (OSU) who have been volunteering for over ten years to host our site, but the downside is that they have day jobs just like the rest of us.  As a result, Code4Lib comes nowhere close to being a priority among all the demands of anyone’s employer.  As any web developer knows, no public-facing app is ever safe from security threats, updates, patches, and just plain old evolving trends and standards that make a site feel relevant.  This poses a problem because a distributed community cannot have a single point of failure.  We cannot put the kind folks at OSU in the position of subservience to the group.  At the same time, we need to move forward, and it’s hard to get sponsors for a technology conference when the site looks and performs in a way that does not meet modern standards and conventions.  Our communal wiki did not even come close.&lt;/p&gt;
 
@@ -98,10 +155,10 @@
 &lt;p&gt;Due to the community’s familiarity with and widespread adoption of GitHub, we thought GitHub Pages and Jekyll would be a great way to host the site for free and allow community collaboration.  They allowed us to use our custom domain, and the hardest part of the process was getting the OSU folks to find the time to make a  DNS change so we could use &lt;a href=&quot;http://2016.code4lib.org&quot;&gt;2016.code4lib.org&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;design&quot;&gt;Design&lt;/h2&gt;
-&lt;p&gt;The old wiki had navigation that evolved organically simply did not work for a conference site.  Furthermore, it was slow and not up to current accessibility standards.  The wiki was the opposite of forward-thinking web technologies, and did not represent the groud-breaking work members of the community did for a living.  The design process involved little more than looking at conventions for conference websites, and designing something that fit that structure.  When it came to the potentially subjective stuff (picking fonts, colors, icons, etc.) I received some good critiques, but in the spirit of Code4Lib, was mostly free to implement what I thought would work and have a little fun while I was at it. (I am particularly  pleased with the parody on the famous LOVE sculpture found in Philly’s Love Park.)&lt;/p&gt;
+&lt;p&gt;The old wiki had navigation that evolved organically, and it simply did not work for a conference site.  Furthermore, it was slow and not up to current accessibility standards.  The wiki was the opposite of forward-thinking web technologies, and did not represent the groudbreaking work members of the community did for a living.  The design process involved little more than looking at conventions for conference websites, and designing something that fit that structure.  When it came to the potentially subjective stuff (picking fonts, colors, icons, etc.) I received some good critiques, but in the spirit of Code4Lib, was mostly free to implement what I thought would work and have a little fun while I was at it. (I am particularly  pleased with the parody on the famous LOVE sculpture found in Philly’s Love Park.)&lt;/p&gt;
 
 &lt;h2 id=&quot;badges-of-distinction&quot;&gt;Badges of Distinction&lt;/h2&gt;
-&lt;p&gt;One thing that has always irked me about Code4Lib is that the sponsors seemed somewhat removed from the community.  While everyone wore the sponsor logos on their conference t-shirts, you didn’t necessarily know who was supporting the conference while you were mingling.  Having the “Badges of Distinction” printed on name tags is a great way to put a face to an impersonal logo, is a great conversation starter, and reinforces the fact that we hold our sponsors in high regard.  Sponsors often want to interact with the community, ask them for feedback on products, and even do some recruiting to fill gaps in their own teams.  I would rather have this kind of visibility any day over a keychain or brochure in the conference swag bag.  &lt;a href=&quot;http://localhost:4000/prospectus.html#General-Sponsorship&quot;&gt;Here are the badges I came up with&lt;/a&gt;, easily re-usable icons for “gamification motivators” in other projects I’m working on.&lt;/p&gt;
+&lt;p&gt;One thing that has always irked me about Code4Lib is that the sponsors seemed somewhat removed from the community.  While everyone wore the sponsor logos on their conference t-shirts, you didn’t necessarily know who was supporting the conference while you were mingling.  Having the “Badges of Distinction” printed on name tags is a great way to put a face to an impersonal logo, is a great conversation starter, and reinforces the fact that we hold our sponsors in high regard.  Sponsors often want to interact with the community, ask them for feedback on products, and even do some recruiting to fill gaps in their own teams.  I would rather have this kind of visibility any day over a keychain or brochure in the conference swag bag.  &lt;a href=&quot;http://2016.code4lib.org/prospectus.html#General-Sponsorship&quot;&gt;Here are the badges I came up with&lt;/a&gt;, easily re-usable icons for “gamification motivators” in other projects I’m working on.&lt;/p&gt;
 
 &lt;h2 id=&quot;structured-data&quot;&gt;Structured Data&lt;/h2&gt;
 &lt;p&gt;We wanted to allow the community to contribute nominations for keynote speakers or talk/workshop proposals without having to make a pull request.  The process had to be as simple as possible, and we need the data to be structured to make it easy to load into our Diebold-o-tron voting app since all content-oriented conference decisions are decided democratically by the community.  Github’s static site generator, Jekyll, has a way to use structured data when building a site, but we needed a more user friendly way than a “pull request” to collect that data.  In the end, we were able to create Google Forms that saved user contributed data to Spreadsheets in a structured way.  With Sheetsu, &lt;a href=&quot;http://roastduckalamode.github.io/fromSheetsToJekyll/&quot;&gt;@roastduckalamode devised a way to turn the spreadsheets into YAML&lt;/a&gt;.  This will serve us well when we have our final speakers and schedule.  However, we need to display the data in real-time so that users know that they are not submitting a duplicate talk.  Using &lt;a href=&quot;https://github.com/jsoma/tabletop&quot;&gt;Tabletop.js&lt;/a&gt; &lt;a href=&quot;https://github.com/bibliotechy&quot;&gt;@bibliotechy&lt;/a&gt; and &lt;a href=&quot;https://github.com/roastduckalamode&quot;&gt;@roastduckalamode&lt;/a&gt; came up with a fairly performant way to &lt;a href=&quot;http://2016.code4lib.org/proposed-talks.html&quot;&gt;pull the data into the site&lt;/a&gt; using the Google Docs API.&lt;/p&gt;
@@ -109,7 +166,7 @@
 &lt;h2 id=&quot;in-the-end-hellip&quot;&gt;In the end …&lt;/h2&gt;
 &lt;p&gt;Nothing’s perfect, and there’s still some technical overhead, but this will be by far the most usable Code4Lib conference site to date.  If it’s any proof, we’ve already added a number of sponsors who knew nothing about Code4Lib until this year.  It’s not as easy as it would seem to try to change things in a space without authority. But if, as Eric Schmidt (former CEO of Google) said, the Internet is the largest experiment in anarchy we’ve ever had, Code4Lib fully embodies that spirit.  &lt;/p&gt;
 </description>
-        <pubDate>Fri, 30 Oct 2015 10:29:20 -0400</pubDate>
+        <pubDate>Fri, 30 Oct 2015 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</guid>
         
@@ -352,7 +409,7 @@
         &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Wed, 10 Jun 2015 10:29:20 -0400</pubDate>
+        <pubDate>Wed, 10 Jun 2015 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html</guid>
         
@@ -409,7 +466,7 @@
 
 &lt;p&gt;As I think back over my twenty years of being a musician and performer, the places that are still around are the ones that care about musicians, treat them well, and show respect.  Being a gigging musician is hard work, so the little breaks and gestures you can offer go a long way towards cultivating the kind of relationship you want.  The musicians are not working &lt;em&gt;for&lt;/em&gt; you.  They are working &lt;em&gt;with&lt;/em&gt; you, in harmony.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 12 Jul 2014 04:53:05 -0400</pubDate>
+        <pubDate>Sat, 12 Jul 2014 03:53:05 -0500</pubDate>
         <link>http://sdellis.com/music/blogging/2014/07/12/on-booking.html</link>
         <guid isPermaLink="true">http://sdellis.com/music/blogging/2014/07/12/on-booking.html</guid>
         
@@ -434,7 +491,7 @@
 
 &lt;p&gt;Now what was I going to do again?  Oh yes, start blogging…&lt;/p&gt;
 </description>
-        <pubDate>Fri, 07 Feb 2014 09:29:20 -0500</pubDate>
+        <pubDate>Fri, 07 Feb 2014 08:29:20 -0600</pubDate>
         <link>http://sdellis.com/tech/blogging/2014/02/07/king-of-my-own-domain-on-a-paupers-budget.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2014/02/07/king-of-my-own-domain-on-a-paupers-budget.html</guid>
         
@@ -473,7 +530,7 @@
 
 &lt;p&gt;-Shaun&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Oct 2013 10:29:20 -0400</pubDate>
+        <pubDate>Wed, 30 Oct 2013 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2013/10/30/ideal-ux-position.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2013/10/30/ideal-ux-position.html</guid>
         
@@ -742,7 +799,7 @@
 
 &lt;p&gt;Next lesson will be the finishing touches: the axes, labels, and scaling to fit the screen.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 27 Jul 2011 10:29:20 -0400</pubDate>
+        <pubDate>Wed, 27 Jul 2011 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html</guid>
         
@@ -908,7 +965,7 @@
         &#39;4&#39; =&amp;gt; &quot;1&quot;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-        <pubDate>Sun, 24 Jul 2011 10:29:20 -0400</pubDate>
+        <pubDate>Sun, 24 Jul 2011 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html</guid>
         
@@ -1028,7 +1085,7 @@
 
 &lt;p&gt;&lt;strong&gt;Further reading:&lt;/strong&gt; &lt;a href=&quot;http://docs.jquery.com/Tutorials:How_jQuery_Works#jQuery:_The_Basics&quot;&gt;How jQuery Works&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 20 Jul 2011 10:29:20 -0400</pubDate>
+        <pubDate>Wed, 20 Jul 2011 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html</guid>
         

@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Personal User Interfaces"
+date:   2016-04-14 14:29:20
+categories: tech blogging design
+---
+
+Many years ago, I remember learning about how little data the human mind needs before it starts to fill in the blanks to interpret what it's seeing. I was introduced to the biological motion demos created by George Mather in an Information Visualization class way back in 2010.  Unfortunately, it seems that the site that hosts them is no longer available and the Wayback Machine cannot support the plugin that was used. But, you can [read about the original example](https://web.archive.org/web/20071212222117/http://www.lifesci.sussex.ac.uk/home/George_Mather/Motion/BM.HTML), and through the process I describe in this post (spoiler alert!), I have [recreated the effect at CodePen](http://codepen.io/sdellis/pen/xVYMJj).
+
+Animation is a powerful 4th-dimension communication tool that can tell a story, convey meaning, signal transitions, draw attention, and show changes to data over time. Animation on the internet is almost as old as the internet itself, although it's had a dip in popularity with only a recent resurgence as the interest in Interaction Design has grown.
+
+Many of us have been doing this long enough to remember the excesses of Macromedia's (and then Adobe's) Flash technology. Flash provided simple visual tools for designers to create motion graphics in websites. Animation as a design element was often abused as designers created infamous "splash" pages, blinking icons, and overzealous button clicks.  This, along with several other shortcomings -- and [one famous snub](http://www.apple.com/hotnews/thoughts-on-flash/) -- led to Flash's ultimate demise.
+
+I have been eager to play with HTML5 Canvas, CSS, and SVG animations and figured that recreating the simple animation like this would be good to have a project to test them out with. I thought back to the animated dots and how it was essentially a moving constellation.  Then I thought it would be fun to bring the night sky to life by animating custom constellations.
+
+I stumbled across this animation of a "polylion" and had no idea that the state of JavaScript animation was so sophisticated.  This work used  GreenSock's TweenMax animation library, and I noticed a few other impressive animations that used this library as well.  Reading up, I realized that the API was conceptually similar to how one might construct animations on Timelines in Flash, but without the visual cues or feedback.
+
+However, in order to animate my dots, I would need to plot their coordinate values on a X/Y axis, and then plug these into my code.  This was going to be impossible to do without a graphical interface and instant feedback. Furthermore, in order to get the nuances that I saw in the original animation, I would have to trace the movement of each joint in each frame on top of a moving being.
+
+I decided that I needed to build an interface that would let me visually plot and animate the dots on top of each frame of an animation. It would need to also allow me to move the dots visually, and would then have to write the code for me.
+
+Luckily, I discovered libgif-js and was able to control a GIF animation with "video-like" controls. This worked well, but I needed to overlay an SVG canvas that would let me add dots by clicking on the image. I tried to use standard HTML5, but working with SVG is a little different from working with standard DOM elements. I had to do some backflips to be able to add SVG dots to the canvas. I also had trouble with HTML5 standard "draggable" commands.  Now that I have discovered GreenSock's TweenMax has "Draggable" utility, I probably will try using that, but for the initial draft, I used [Snap](http://snapsvg.io/).
+
+The result is the first pass at a simple user interface to generate my animations. There are a number of bugs that I need to address, but if you don't scroll or resize while you are plotting the dots you can quickly make an animation as demonstrated in this short video:
+
+<iframe name='quickcast' src='http://quick.as/embed/egr7cbvkx' scrolling='no' frameborder='0' width='100%' allowfullscreen></iframe><script src='http://quick.as/embed/script/1.12'></script>
+
+Of course, you need to do this for every frame in the sequence, but once you are done, you can click the "Show the Code" button, copy and paste into the appropriate places in [this Codepen template](http://codepen.io/sdellis/pen/EKLqrx) and voilà! A constellation animation!
+
+Next steps include refining the interface, adding better styles, and squashing some of the scrolling/resize bugs.  I would also like it to generate the animation right in the interface/app, without having to rely on CodePen.  It would also be cool if people could upload their own GIFs as it doesn't work cross-domain for security purposes.  Finally, it would be great to extend this beyond dots and allow animators to create layers of polygons and other shapes for expanded design element options.
+
+The ability to create personal interfaces that simplify your tasks (or even make them possible) is incredibly empowering.  You also don't always need to make a polished product if it meets your goals and you know how to use it.  Most of us UI developers are so busy developing awesome front ends for others that we forget we can create interfaces for ourselves to get the output we want from the computer.
+
+----
