@@ -1,10 +1,10 @@
 ---
 layout: labs-default
-title: Constellation Animation Creation Interface
+title: Animated Constellation Creation Interface
 permalink: /labs/animation-tool/
 ---
 ## Constellation Animation Creation Interface
-This is a simple user interface I developed to create "constellation animations" from animated GIFs. The animations are created in Javascript using the [GreenSock JavaScript Animation API](http://greensock.com/), and this tool will generate the code for you. Follow the steps in [this short video](http://quick.as/egr7cbvkx) (30 seconds long) to try it for yourself.
+This is a simple user interface I developed to create "constellation animations" from animated GIFs. The animations are created in Javascript using the [GreenSock JavaScript Animation API](http://greensock.com/), and this tool will generate the code for you. Follow the steps in [this short video](http://quick.as/egr7cbvkx) (30 seconds long) to try it for yourself. <em>Note: Page scroll has been intentionally disabled.</em>
 
 {::options html_to_native="true" /}
 
@@ -16,28 +16,46 @@ This is a simple user interface I developed to create "constellation animations"
 
 			</div>
 
-			<div class="codepen">
-				<h2>SVG/HTML</h2>
-				<form><textarea id="code" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;"></textarea></form>
-			</div>
-
-			<div class="codepen">
-				<h2>Javascript</h2>
-				<form><textarea id="timeline" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;">var t1 = new TimelineMax(); t1</textarea></form>
-			</div>
-
 			<div id="controls"/>
-				<button id="pause">Pause</button> |
-				<button id="play">Play</button> |
-				<button id="restart">Restart</button> |
-				<button id="next">Step forward</button> |
-				<button id="prev">Step back</button>
+				<button class="btn small" id="pause">Pause</button> |
+				<button class="btn small" id="play">Play</button> |
+				<button class="btn small" id="restart">Restart</button> |
+				<button class="btn small" id="next">Step forward</button> |
+				<button class="btn small" id="prev">Step back</button>
 			</div>
 
 			<hr/>
 
 			<br/>
-			<button id="animate">Animate</button><button id="show">Show the Code</button>
+			<button class="btn small" id="animate">Animate</button> | <button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Copy & Paste into CodePen</h4>
+			      </div>
+			      <div class="modal-body">
+						<div class="codepen">
+							<h2>SVG/HTML</h2>
+							<form><textarea id="code" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;"></textarea></form>
+						</div>
+
+						<div class="codepen">
+							<h2>Javascript</h2>
+							<form><textarea id="timeline" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;">var t1 = new TimelineMax(); t1</textarea></form>
+						</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Save changes</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
 </center>
 
@@ -55,6 +73,10 @@ This is a simple user interface I developed to create "constellation animations"
 			var i = 0;
 			var c = [];
 
+			var $body = $('body'),
+    			scrollDisabled = false,
+    			scrollTop;
+
 			function disable() {
 			  $( "#animate" ).css("background","lightgreen").text("Animating");
 			}
@@ -63,6 +85,23 @@ This is a simple user interface I developed to create "constellation animations"
 				$( container ).off();
 				disable();
 			});
+
+			scrollDisable();
+
+			function scrollDisable() {
+			    if (scrollDisabled) {
+			        return;
+			    }
+
+			    scrollTop = $(window).scrollTop();
+
+			    $body.addClass('scrolDisabled')
+			        .css({
+			        top: -1 * scrollTop
+			    });
+
+			    scrollDisabled = true;
+			}
 
 			$( "#show" ).click(function() {
 				$( ".codepen" ).show();

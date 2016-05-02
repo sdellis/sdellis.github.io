@@ -6,8 +6,8 @@
 </description>
     <link>http://sdellis.com/</link>
     <atom:link href="http://sdellis.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 18 Apr 2016 19:49:17 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2016 19:49:17 -0500</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 17:22:53 -0400</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 17:22:53 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -54,7 +54,7 @@
 
 &lt;hr /&gt;
 </description>
-        <pubDate>Thu, 14 Apr 2016 09:29:20 -0500</pubDate>
+        <pubDate>Thu, 14 Apr 2016 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/design/2016/04/14/personal-user-interfaces.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2016/04/14/personal-user-interfaces.html</guid>
         
@@ -113,7 +113,7 @@
 
 &lt;p&gt;I was heavily influenced by &lt;a href=&quot;https://joreteg.com/&quot;&gt;Henrik Joreteg’s&lt;/a&gt; book &lt;a href=&quot;http://humanjavascript.com/&quot;&gt;Human JavasScript&lt;/a&gt; when creating Tabula and Tabula Rasa.  Empiricists like me believe that everyone can learn to code, and if you’re just learning to write JavaScript, I cannot recommend this book enough.  Read more about Tabula Rasa on the &lt;a href=&quot;https://github.com/sdellis/tabula-rasa&quot;&gt;GitHub page&lt;/a&gt;, test it out, and let me know what you think. The future is a blank slate!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Dec 2015 08:29:20 -0600</pubDate>
+        <pubDate>Wed, 30 Dec 2015 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html</guid>
         
@@ -166,7 +166,7 @@
 &lt;h2 id=&quot;in-the-end-hellip&quot;&gt;In the end …&lt;/h2&gt;
 &lt;p&gt;Nothing’s perfect, and there’s still some technical overhead, but this will be by far the most usable Code4Lib conference site to date.  If it’s any proof, we’ve already added a number of sponsors who knew nothing about Code4Lib until this year.  It’s not as easy as it would seem to try to change things in a space without authority. But if, as Eric Schmidt (former CEO of Google) said, the Internet is the largest experiment in anarchy we’ve ever had, Code4Lib fully embodies that spirit.  &lt;/p&gt;
 </description>
-        <pubDate>Fri, 30 Oct 2015 09:29:20 -0500</pubDate>
+        <pubDate>Fri, 30 Oct 2015 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/design/2015/10/30/anarchists-codebook.html</guid>
         
@@ -409,7 +409,7 @@
         &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Wed, 10 Jun 2015 09:29:20 -0500</pubDate>
+        <pubDate>Wed, 10 Jun 2015 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html</guid>
         
@@ -466,7 +466,7 @@
 
 &lt;p&gt;As I think back over my twenty years of being a musician and performer, the places that are still around are the ones that care about musicians, treat them well, and show respect.  Being a gigging musician is hard work, so the little breaks and gestures you can offer go a long way towards cultivating the kind of relationship you want.  The musicians are not working &lt;em&gt;for&lt;/em&gt; you.  They are working &lt;em&gt;with&lt;/em&gt; you, in harmony.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 12 Jul 2014 03:53:05 -0500</pubDate>
+        <pubDate>Sat, 12 Jul 2014 04:53:05 -0400</pubDate>
         <link>http://sdellis.com/music/blogging/2014/07/12/on-booking.html</link>
         <guid isPermaLink="true">http://sdellis.com/music/blogging/2014/07/12/on-booking.html</guid>
         
@@ -491,7 +491,7 @@
 
 &lt;p&gt;Now what was I going to do again?  Oh yes, start blogging…&lt;/p&gt;
 </description>
-        <pubDate>Fri, 07 Feb 2014 08:29:20 -0600</pubDate>
+        <pubDate>Fri, 07 Feb 2014 09:29:20 -0500</pubDate>
         <link>http://sdellis.com/tech/blogging/2014/02/07/king-of-my-own-domain-on-a-paupers-budget.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2014/02/07/king-of-my-own-domain-on-a-paupers-budget.html</guid>
         
@@ -530,7 +530,7 @@
 
 &lt;p&gt;-Shaun&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Oct 2013 09:29:20 -0500</pubDate>
+        <pubDate>Wed, 30 Oct 2013 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/2013/10/30/ideal-ux-position.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2013/10/30/ideal-ux-position.html</guid>
         
@@ -799,7 +799,7 @@
 
 &lt;p&gt;Next lesson will be the finishing touches: the axes, labels, and scaling to fit the screen.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 27 Jul 2011 09:29:20 -0500</pubDate>
+        <pubDate>Wed, 27 Jul 2011 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html</guid>
         
@@ -965,7 +965,7 @@
         &#39;4&#39; =&amp;gt; &quot;1&quot;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-        <pubDate>Sun, 24 Jul 2011 09:29:20 -0500</pubDate>
+        <pubDate>Sun, 24 Jul 2011 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html</guid>
         
@@ -1085,7 +1085,7 @@
 
 &lt;p&gt;&lt;strong&gt;Further reading:&lt;/strong&gt; &lt;a href=&quot;http://docs.jquery.com/Tutorials:How_jQuery_Works#jQuery:_The_Basics&quot;&gt;How jQuery Works&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 20 Jul 2011 09:29:20 -0500</pubDate>
+        <pubDate>Wed, 20 Jul 2011 10:29:20 -0400</pubDate>
         <link>http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html</link>
         <guid isPermaLink="true">http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html</guid>
         

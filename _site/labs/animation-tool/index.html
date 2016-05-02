@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Constellation Animation Creation Interface</title>
+    <title>Animated Constellation Creation Interface</title>
     <meta name="description" content="Creative polymath with iconoclastic tendencies.
 ">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -17,6 +17,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 
 
@@ -75,22 +76,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="page-content">
       <div class="wrapper">
         <h2 id="constellation-animation-creation-interface">Constellation Animation Creation Interface</h2>
-<p>This is a simple user interface I developed to create “constellation animations” from animated GIFs. The animations are created in Javascript using the <a href="http://greensock.com/">GreenSock JavaScript Animation API</a>, and this tool will generate the code for you. Follow the steps in <a href="http://quick.as/egr7cbvkx">this short video</a> (30 seconds long) to try it for yourself.</p>
+<p>This is a simple user interface I developed to create “constellation animations” from animated GIFs. The animations are created in Javascript using the <a href="http://greensock.com/">GreenSock JavaScript Animation API</a>, and this tool will generate the code for you. Follow the steps in <a href="http://quick.as/egr7cbvkx">this short video</a> (30 seconds long) to try it for yourself. <em>Note: Page scroll has been intentionally disabled.</em></p>
 
 <center> <div id="contentContainer">
 <img class="grid" id="example1" src="/img/horse-still.jpg" rel:animated_src="/img/horse.gif" rel:auto_play="0" width="467" height="375" />     <svg class="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="horse" viewbox="0 0 467 375"></svg>
-  </div> <div class="codepen">
-    <h2 id="svghtml">SVG/HTML</h2>
-    <form>
-      <textarea id="code" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;"></textarea>
-    </form>
-  </div> <div class="codepen">
-    <h2 id="javascript">Javascript</h2>
-    <form>
-      <textarea id="timeline" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;">var t1 = new TimelineMax(); t1</textarea>
-    </form>
-  </div> <div id="controls"></div> <button id="pause">Pause</button> | <button id="play">Play</button> | <button id="restart">Restart</button> | <button id="next">Step forward</button> | <button id="prev">Step back</button>   <hr />
- <br /> <button id="animate">Animate</button><button id="show">Show the Code</button> </center>
+  </div> <div id="controls"></div> <button class="btn small" id="pause">Pause</button> | <button class="btn small" id="play">Play</button> | <button class="btn small" id="restart">Restart</button> | <button class="btn small" id="next">Step forward</button> | <button class="btn small" id="prev">Step back</button>   <hr />
+ <br /> <button class="btn small" id="animate">Animate</button> | <button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button> <!-- Modal --> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>           <h4 class="modal-title" id="myModalLabel">Copy &amp; Paste into CodePen</h4>
+        </div>
+        <div class="modal-body">
+          <div class="codepen">
+            <h2 id="svghtml">SVG/HTML</h2>
+            <form>
+              <textarea id="code" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;"></textarea>
+            </form>
+          </div>
+          <div class="codepen">
+            <h2 id="javascript">Javascript</h2>
+            <form>
+              <textarea id="timeline" cols="30" rows="5" style="resize: none; overflow-y: hidden; height: 85px;">var t1 = new TimelineMax(); t1</textarea>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> </center>
 
 <script src="/js/supergif.js"></script>
 
@@ -108,6 +124,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var i = 0;
 			var c = [];
 
+			var $body = $('body'),
+    			scrollDisabled = false,
+    			scrollTop;
+
 			function disable() {
 			  $( "#animate" ).css("background","lightgreen").text("Animating");
 			}
@@ -116,6 +136,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				$( container ).off();
 				disable();
 			});
+
+			scrollDisable();
+
+			function scrollDisable() {
+			    if (scrollDisabled) {
+			        return;
+			    }
+
+			    scrollTop = $(window).scrollTop();
+
+			    $body.addClass('scrolDisabled')
+			        .css({
+			        top: -1 * scrollTop
+			    });
+
+			    scrollDisabled = true;
+			}
 
 			$( "#show" ).click(function() {
 				$( ".codepen" ).show();

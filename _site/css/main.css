@@ -329,7 +329,7 @@ div .section-content {
   float: left;
   min-width: 100%;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   min-height: 300px;
   background: url(../img/sdellis_edui_cropped.jpg) top no-repeat;
   background-size: cover;
@@ -339,6 +339,11 @@ div .section-content {
     #main {
       background: url(../img/sdellis_edui.jpg) top no-repeat;
       background-size: cover; } }
+
+body.scrolDisabled {
+  position: fixed;
+  left: 50%;
+  margin-left: -400px; }
 
 /**
  * Syntax highlighting styles

@@ -250,7 +250,7 @@ div .section-content {
   float: left;
   min-width: 100%;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   min-height: 300px;
   background: url(../img/sdellis_edui_cropped.jpg) top no-repeat;
   @media screen and (min-width: 360px) {
@@ -260,4 +260,10 @@ div .section-content {
   background-size: cover;
   color: #fff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+body.scrolDisabled {
+    position: fixed;
+    left: 50%;
+    margin-left: -400px;
 }
