@@ -4,9 +4,8 @@ title: Animated Constellation Creation Interface
 permalink: /labs/animation-tool/
 ---
 ## Constellation Animation Creation Interface
-This is a simple user interface I developed to create "constellation animations" from animated GIFs. The animations are created in Javascript using the [GreenSock JavaScript Animation API](http://greensock.com/), and this tool will generate the code for you. Follow the steps in [this short video](http://quick.as/egr7cbvkx) (30 seconds long) to try it for yourself. <em>Note: Page scroll has been intentionally disabled.</em>
-
 {::options html_to_native="true" /}
+This is a simple user interface I developed to create "constellation animations" from animated GIFs. The animations are created in Javascript using the [GreenSock JavaScript Animation API](http://greensock.com/), and this tool will generate the code for you. Follow the steps to the left to try it yourself. <em>Note: Page scroll has been intentionally disabled.</em>
 
 <center>
 
@@ -24,12 +23,19 @@ This is a simple user interface I developed to create "constellation animations"
 				<button class="btn small" id="prev">Step back</button>
 			</div>
 
-			<hr/>
-
 			<br/>
-			<button class="btn small" id="animate">Animate</button> | <button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button>
 
-
+			<!-- Steps -->
+			<div class="steps" id="step-1">
+				<h3>Step One</h3>
+				<p>Click on the horse's "joints" in the image to add dots.</p><p><a href="" data-toggle="modal" data-target="#step1Modal"> See example.</a></p>
+				<button class="btn small" id="animate">Next Step</button>
+			</div>
+			<div class="steps" id="step-2">
+				<h3>Step Two</h3>
+				<p>Now, you will animate the dots for each frame. Click "step forward" to advance the GIF to the next frame and drag all the dots to where the joints should be in this frame. Do this for each frame you want to animate.  When you are done, click "Show the Code".</p><p><a href="" data-toggle="modal" data-target="#step2Modal"> See example.</a></p>
+				<button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button>
+			</div>
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
@@ -83,7 +89,8 @@ This is a simple user interface I developed to create "constellation animations"
 
 			$( "#animate" ).click(function() {
 				$( container ).off();
-				disable();
+				$("#step-1").hide();
+				$("#step-2").show();
 			});
 
 			scrollDisable();

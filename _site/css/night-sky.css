@@ -53,6 +53,24 @@ html, body {
 .codepen {
   display: none; }
 
+body.scrolDisabled {
+  position: fixed;
+  left: 50%;
+  margin-left: -400px; }
+
+.wrapper {
+  position: relative; }
+
+.steps {
+  position: absolute;
+  top: 175px;
+  left: -200px;
+  width: 200px;
+  text-align: right; }
+
+#step-2 {
+  display: none; }
+
 /*
 
 #contentContainer {

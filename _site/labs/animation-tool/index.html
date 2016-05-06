@@ -76,12 +76,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="page-content">
       <div class="wrapper">
         <h2 id="constellation-animation-creation-interface">Constellation Animation Creation Interface</h2>
-<p>This is a simple user interface I developed to create “constellation animations” from animated GIFs. The animations are created in Javascript using the <a href="http://greensock.com/">GreenSock JavaScript Animation API</a>, and this tool will generate the code for you. Follow the steps in <a href="http://quick.as/egr7cbvkx">this short video</a> (30 seconds long) to try it for yourself. <em>Note: Page scroll has been intentionally disabled.</em></p>
+<p>This is a simple user interface I developed to create “constellation animations” from animated GIFs. The animations are created in Javascript using the <a href="http://greensock.com/">GreenSock JavaScript Animation API</a>, and this tool will generate the code for you. Follow the steps to the left to try it yourself. <em>Note: Page scroll has been intentionally disabled.</em></p>
 
 <center> <div id="contentContainer">
 <img class="grid" id="example1" src="/img/horse-still.jpg" rel:animated_src="/img/horse.gif" rel:auto_play="0" width="467" height="375" />     <svg class="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="horse" viewbox="0 0 467 375"></svg>
-  </div> <div id="controls"></div> <button class="btn small" id="pause">Pause</button> | <button class="btn small" id="play">Play</button> | <button class="btn small" id="restart">Restart</button> | <button class="btn small" id="next">Step forward</button> | <button class="btn small" id="prev">Step back</button>   <hr />
- <br /> <button class="btn small" id="animate">Animate</button> | <button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button> <!-- Modal --> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  </div> <div id="controls"></div> <button class="btn small" id="pause">Pause</button> | <button class="btn small" id="play">Play</button> | <button class="btn small" id="restart">Restart</button> | <button class="btn small" id="next">Step forward</button> | <button class="btn small" id="prev">Step back</button> <br /> <!-- Steps --> <div class="steps" id="step-1">
+    <h3 id="step-one">Step One</h3>
+    <p>Click on the horse's "joints" in the image to add dots.</p>
+    <p><a href="" data-toggle="modal" data-target="#step1Modal"> See example.</a></p>
+ <button class="btn small" id="animate">Next Step</button>
+  </div> <div class="steps" id="step-2">
+    <h3 id="step-two">Step Two</h3>
+    <p>Now, you will animate the dots for each frame. Click "step forward" to advance the GIF to the next frame and drag all the dots to where the joints should be in this frame. Do this for each frame you want to animate. When you are done, click "Show the Code".</p>
+    <p><a href="" data-toggle="modal" data-target="#step2Modal"> See example.</a></p>
+ <button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button>
+  </div> <!-- Modal --> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -134,7 +143,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 			$( "#animate" ).click(function() {
 				$( container ).off();
-				disable();
+				$("#step-1").hide();
+				$("#step-2").show();
 			});
 
 			scrollDisable();

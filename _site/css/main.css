@@ -340,11 +340,6 @@ div .section-content {
       background: url(../img/sdellis_edui.jpg) top no-repeat;
       background-size: cover; } }
 
-body.scrolDisabled {
-  position: fixed;
-  left: 50%;
-  margin-left: -400px; }
-
 /**
  * Syntax highlighting styles
  */
