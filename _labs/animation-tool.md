@@ -36,13 +36,14 @@ This is a simple user interface I developed to create "constellation animations"
 				<p>Now, you will animate the dots for each frame. Click "step forward" to advance the GIF to the next frame and drag all the dots to where the joints should be in this frame. Do this for each frame you want to animate.  When you are done, click "Show the Code".</p><p><a href="" data-toggle="modal" data-target="#step2Modal"> See example.</a></p>
 				<button class="btn small" id="show" data-toggle="modal" data-target="#myModal">Show the Code</button>
 			</div>
+
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Copy & Paste into CodePen</h4>
+			        <h4 class="modal-title" id="myModalLabel">Copy & Paste into this <a href="http://codepen.io/sdellis/pen/PNMRxL">CodePen Template</a></h4>
 			      </div>
 			      <div class="modal-body">
 						<div class="codepen">
@@ -57,11 +58,52 @@ This is a simple user interface I developed to create "constellation animations"
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-primary">Save changes</button>
+
 			      </div>
 			    </div>
 			  </div>
 			</div>
+
+
+			<!-- Step One Modal -->
+			<div class="modal fade" id="step1Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="step1ModalLabel">Step One: Example</h4>
+						</div>
+						<div class="modal-body">
+							<img src="/img/step-one.gif" />
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Step Two Modal -->
+			<div class="modal fade" id="step2Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="step2ModallLabel">Step Two: Example</h4>
+			      </div>
+			      <div class="modal-body">
+							<img src="/img/step-two.gif" />
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
 
 </center>
 
