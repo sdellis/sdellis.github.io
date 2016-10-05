@@ -102,8 +102,9 @@ requirements, manage expectations, and provide status reports throughout develop
 </div>
 </section>
 <section id="pro-orgs">
-## PROFESSIONAL ORGANIZATIONS
+## PROFESSIONAL CONFERENCES AND ORGANIZATIONS
 <div class="section-content">
+* [EdUI](http://eduiconf.org) (Scheduled to teach a ["Sophisticated Animation with JavaScript" workshop](http://eduiconf.org/sessions/javascript-animation/) in October 2016)
 * [Code4Lib](https://github.com/code4lib) (Participant and Contributor as there is no official "membership")
 * [Drupal Association](https://www.drupal.org/user/2804475/) (Individual Member)
 * [Association for Computers and Humanities](http://ach.org/) (Individual Member)
@@ -111,7 +112,7 @@ requirements, manage expectations, and provide status reports throughout develop
 <section id="hobbies">
 ## RELATED HOBBIES
 <div class="section-content">
-* Wrote and maintain [Tabula Rasa](http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html), a node.js “base library” for working with [IIIF Presentation API](http://iiif.io/api/presentation/2.0/) resources.
+* Author and maintainer of [Tabula Rasa](http://sdellis.com/tech/blogging/javascript/iiif/2015/12/30/introducing-tabula-rasa.html), a node.js “base library” for working with [IIIF Presentation API](http://iiif.io/api/presentation/2.0/) resources.
 * Developing [Tabula](https://github.com/sdellis/tabula), a "starter kit" slideshow native web app that uses IIIF Manifests as a data source with distributed data stores.
 * I am a songwriter and multi-instrumentalist, proficient in [guitar](http://shaunellis.bandcamp.com/track/test-my-luck), [mandolin](https://soundcloud.com/shaun-ellis-7/sets/soundtrack-for-croquet), [piano](https://soundcloud.com/shaun-ellis-7/13-streets-of-berlin), and more.
 * I am an [artist](https://instagram.com/explore/tags/sdellisart/), with my favorite mediums being pencil, pen and ink, silkscreen, and watercolor.
