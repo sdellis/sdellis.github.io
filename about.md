@@ -5,24 +5,23 @@ permalink: /cv/
 ---
 {::options parse_block_html="true" /}
 <section id="intro">
-## Senior Full Stack Developer, Front-End Emphasis
+## UX Developer
 609.933.7442 &bull; shaun@sdellis.com &bull; [GitHub](https://github.com/sdellis) &bull; [npm](https://www.npmjs.com/~sdellis)
 
-I am a highly motivated full stack developer with over 15 years of experience designing Web-based
-software applications.  I bring a unique set of skills to making sense of our cultural heritage.  My key interest is in
-creating tools that help us explore the relationships and patterns among data that only computers can help us discover.  My Bachelor's degree has given me a deep understanding of the history and practice of art and design, while years
-of programming practice, a Master in Library and Information Science, and ten years experience of full stack development for academic libraries, have left me with an ideal skill set for supporting Digital Humanities scholarship.
+Collaborative, thoughtful UX Developer seeking the next challenge to design and improve a product’s desktop, tablet, and mobile experiences. Bridges the gap between design and technology to establish solid working relationships and effective collaboration among teams.
+
 </section>
 <section id="skills">
 ## SKILLS
 * Semantic accessible HTML5
 * CSS, SCSS, LESS, responsive design
-* JavaScript (native, jQuery, Node/Express.js/npm, Backbone/Ampersand, React)
+* JavaScript (native, TypeScript, jQuery/jQueryUI, Node/Express.js/npm, Backbone/Ampersand, React)
+* Familiarity with ARIA attributes and usage
 * Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, Hydra basics)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
 * Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7 & 8)
 * Graphic Design ([prototyping](https://github.com/sdellis/bluemountain), design systems, Photoshop, Illustrator)
-* [Information Visualization](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song) ([Tableau](https://sites.google.com/site/visualizingahit/results), [Raphael](http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html), d3)
+* [Information Visualization](http://entertainment.slashdot.org/story/11/07/01/1210225/is-there-a-formula-for-a-hit-song) ([Tableau](https://sites.google.com/site/visualizingahit/results), [Raphael](http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html), Paper.js, d3)
 * Databases & Data Structures (relational/SQL, document-oriented, XML, json, RDF/LinkedData)
 * [REST API Development](http://sdellis.com/docs/blue_mountain_ui_spec.pdf)
 * Knowledge of Metadata Standards (IIIF, RDF/Linked Data, Dublin Core, METS, PREMIS, MODS, VRA Core, EAD, SKOS)
@@ -58,16 +57,16 @@ of programming practice, a Master in Library and Information Science, and ten ye
 ### User Interface Developer <br/>Princeton University Library, 2010 - Present
 
 * Enhanced Omeka's Scripto plugin and Scribe theme to create a ["DIY History-like" application](http://transcribe.princeton.edu/items/show/25) for the transcription of Western Americana resources for an undergraduate History class.
-* Played an integral part designing, organizing, and conducting Usability tests for the Finding Aids, RBSC, and Main Library websites.  Tested for viability of new interface concepts, and to better understand the goals of our users.  I have co-authored [an article](http://journal.code4lib.org/articles/7394) and [given talks](https://github.com/pulibrary/dlf2012-talk) on the process.
-* Responsible for developing an innovative interface for our [Finding Aids site](http://findingaids.princeton.edu/), which won both the [2013 SAA Coker Award](http://www2.archivists.org/governance/handbook/section12-coker) and the [2013 MARAC Finding Aid Award](https://blogs.princeton.edu/mudd/2013/04/princeton-wins-marac-finding-aid-award/).
+* Played an integral part designing, organizing, and conducting Usability tests for all major Library websites.  Tested for viability of new interface concepts, and to better understand the goals of our users.  I have co-authored [an article](http://journal.code4lib.org/articles/7394) and [given talks](https://github.com/pulibrary/dlf2012-talk) on the process.
+* Responsible for developing an innovative interface for our [Finding Aids site](http://findingaids.princeton.edu/)(archives), which won both the [2013 SAA Coker Award](http://www2.archivists.org/governance/handbook/section12-coker) and the [2013 MARAC Finding Aid Award](https://blogs.princeton.edu/mudd/2013/04/princeton-wins-marac-finding-aid-award/).
 * Redesigned and developed the [Rare Books and Special Collections website](http://rbsc.princeton.edu/) in Drupal 7, aggregating curator blogs, collection strengths and topics, collections, exhibitions, research tools, and publications into a single site with "federated" search.
 * Responsible for the interface of the [Princeton University Digital Library](http://pudl.princeton.edu/), which includes modifications to the IA BookReader, and integration of Loris (IIIF Images) and OpenSeadragon for deep zoom. ([example](http://pudl.princeton.edu/viewer.php?obj=ms35t871w#page/18/mode/2up)).
-* Committer to [Mirador](https://github.com/IIIF/mirador), a IIIF Presentation Viewer, as well as [Manifesto](https://github.com/IIIF/manifesto), a IIIF Presentation core JavaScript library.
+* Active in the [IIIF Software Developers Interest Group](http://iiif.io/community/groups/software/). Committer to [Mirador](https://github.com/IIIF/mirador), a IIIF Presentation Viewer, as well as [Viewdir web components](https://github.com/viewdir).
 * Created application for [turning METS records into IIIF Presentation API manifests](http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html) to allow users to browse our Digital Library resources with Mirador or the Universal Viewer. (under development, not in production)
 * Built a Rails application to migrate all Mudd Manuscript Library databases off an aging Windows server, and integrated it with [search interfaces on the RBSC website](http://rbsc.princeton.edu/catalogs-databases?field_division_target_id=228) (scroll down to subject-specific databases).
 * Designed the [Versailles on Paper exhibition site](http://rbsc.princeton.edu/versailles/versailles-paper), among other exhibition sites, and wrote a [Drupal module](https://www.drupal.org/sandbox/sdellis/2421047) allowing easy integration of IIIF-compliant images and manuscripts into Drupal.
 * Wrote UI Spec for the [Blue Mountain project](http://bluemountain.princeton.edu/index.html), including ["shovel-ready" HTML wireframes](https://github.com/sdellis/bluemountain) and the scaffolding of a [REST API](http://sdellis.com/docs/blue_mountain_ui_spec.pdf).
-* Currently co-organizing [Code4Lib 2016](http://2016.code4lib.org/). Website designer, Local Planning Committee member, and Sponsorship Committee chair.
+* Co-organizer for [Code4Lib 2016](http://2016.code4lib.org/). Website designer, Local Planning Committee member, and Sponsorship Committee chair.
 * Served a two year term on the Library Education and Training Committee (LETC)
 * Currently serve in advisory role on the Website Steering Group, and transitioned the group to develop using an Agile methodology
 
