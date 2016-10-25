@@ -21,7 +21,7 @@ This is a simple user interface I developed to create "constellation animations"
 				<button class="btn small" id="restart">Restart</button> |
 				<button class="btn small" id="next">Step forward</button> |
 				<button class="btn small" id="prev">Step back</button>
-			</div>
+			
 
 			<br/>
 
