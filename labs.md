@@ -5,7 +5,7 @@ permalink: /labs/
 ---
 This is where I put my "exshperiments" &hellip;
 
-* [Constellation Animation Creation Interface](animation-tool)
+* [Constellation Animation Creation Interface (Web Component  Version)](http://sdellis.com/svg-draw-component/examples/gif.html)
+* [Constellation Animation Creation Interface (Quick and Dirty Version)](animation-tool)
 * [Real-time Named Entity Checker](named-entities)
-* [Drag 'n Drop IIIF Manifest Editor for Reordering Images](manifest-editor)
 * [Freelapse: make stop-action "movies" with your webcam](freelapse)

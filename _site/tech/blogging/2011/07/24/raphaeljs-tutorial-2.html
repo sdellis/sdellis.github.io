@@ -12,7 +12,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://sdellis.com/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html">
+    <link rel="canonical" href="http://localhost:4000/tech/blogging/2011/07/24/raphaeljs-tutorial-2.html">
     <link rel="shortcut icon" href="favicon.ico">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -100,14 +100,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>Then it’s as simple as adding another “include” that points to that plugin code:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;raphael-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.csv.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"raphael-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.csv.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="step-two-create-or-download-a-csv-file">Step Two: Create or Download a CSV file</h3>
 
@@ -117,33 +117,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>Next, we will use the <a href="http://api.jquery.com/jQuery.get">jQuery.get function</a> (see the red code below) which makes it easy to use AJAX to load in external data or files like the one we just created.  The “get” function has twoparameters, the URL/filename of the data, and then a “callback” function that does something (with our without the data) when it’s loaded.  We can simply make the callback function a “wrapper” to our Raphael bubble chart code.  But before we get fancy, let’s just make sure the data is getting loaded by using an alert message to give us some feedback:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 
-	<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// load our csv file and double check</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'data.txt'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// load our csv file and double check</span>
 
-  		<span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
+  		<span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">"|"</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
 
-  		<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Double checking first element of first array: &#39;</span> <span class="o">+</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+  		<span class="nx">alert</span><span class="p">(</span><span class="s1">'Double checking first element of first array: '</span> <span class="o">+</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
 
-	<span class="p">});</span></code></pre></div>
+	<span class="p">});</span></code></pre></figure>
 
 <h3 id="step-four--paint-the-bubble-outlines">Step Four:  Paint the Bubble Outlines</h3>
 
 <p>You should get an alert that says the first element of the first array is “10”.  That tells us the array is loaded and accessible.  (If you want to see what the CSV file “looks like” as an array, you can go to the “Array Contents” at the bottom of this email.)</p>
 
-<p>Next we will create our canvas before we get the data so we have something to paint on – just simply move it up above the <em>$.get</em> block.  Then we will comment out our alert and create a *<a href="http://www.w3schools.com/js/js_loop_for.asp">for* </a><a href="http://www.w3schools.com/js/js_loop_for.asp">loop</a> to iterate over each line in the spreadsheet (now stored as array elements):  </p>
+<p>Next we will create our canvas before we get the data so we have something to paint on – just simply move it up above the <em>$.get</em> block.  Then we will comment out our alert and create a *<a href="http://www.w3schools.com/js/js_loop_for.asp">for* </a><a href="http://www.w3schools.com/js/js_loop_for.asp">loop</a> to iterate over each line in the spreadsheet (now stored as array elements):</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 
 	<span class="c1">// Creates canvas 420 × 300 and positioned via the #canvas stylesheet rules</span>
 
 
-	<span class="kd">var</span> <span class="nx">paper</span> <span class="o">=</span> <span class="nx">Raphael</span><span class="p">(</span><span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="mi">420</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">paper</span> <span class="o">=</span> <span class="nx">Raphael</span><span class="p">(</span><span class="s2">"canvas"</span><span class="p">,</span> <span class="mi">420</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
 
 
-	<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// load our csv file</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'data.txt'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// load our csv file</span>
 
-  	    <span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
+  	    <span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">"|"</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
 
 	    <span class="kd">var</span> <span class="nx">arLen</span><span class="o">=</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
@@ -151,17 +151,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   		<span class="kd">var</span> <span class="nx">bubble</span> <span class="o">=</span> <span class="nx">paper</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">300</span> <span class="o">-</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]);</span>
 
-                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"fill"</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
 
-                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill-opacity&quot;</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span>
+                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"fill-opacity"</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span>
 
-                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">);</span>
+                <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"stroke"</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">);</span>
 
 	    <span class="p">}</span>                
 
-  	    <span class="c1">// alert(&#39;First element of first array: &#39; + array[0][0]);</span>
+  	    <span class="c1">// alert('First element of first array: ' + array[0][0]);</span>
 
-	<span class="p">});</span></code></pre></div>
+	<span class="p">});</span></code></pre></figure>
 
 <p>I should point out a few things.  First, in <em>array[i][0]</em> the “i” represents each line that it’s looping over while the second bracket contains the column number.  Also notice that I gave them some transparency so you could see other bubbles that might be obscured.  Finally, I am subtracting the Y coordinate from the height of the canvas (300) when creating each bubble.  That’s because the Y coordinate of zero on Raphael’s canvas starts at the top left, not the bottom left, as we would expect in a graph.  We will eventually set this to a variable, so the canvas can be any height without affecting the Y value.</p>
 
@@ -171,7 +171,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>————Example of What the Array “Looks Like”————–</p>
 
-<pre><code>*** Array Contents**
+<div class="highlighter-rouge"><pre class="highlight"><code>*** Array Contents**
 
     '0' ...
 
@@ -233,6 +233,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         '4' =&gt; "1"
 </code></pre>
+</div>
 
   </article>
 

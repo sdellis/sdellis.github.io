@@ -17,7 +17,7 @@ Collaborative, thoughtful UX Developer seeking the next challenge to design and 
 * CSS, SCSS, LESS, responsive design
 * JavaScript (native, TypeScript, jQuery/jQueryUI, Node/Express.js/npm, Backbone/Ampersand, React)
 * Familiarity with ARIA attributes and usage
-* Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, Hydra basics)
+* Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, [Blacklight](http://projectblacklight.org/) and [Hydra](https://projecthydra.org/) experience)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
 * Drupal ([module development](https://www.drupal.org/sandbox/sdellis/2421047), theming, site building for Drupal 7 & 8)
 * Graphic Design ([prototyping](https://github.com/sdellis/bluemountain), design systems, Photoshop, Illustrator)
@@ -104,7 +104,7 @@ requirements, manage expectations, and provide status reports throughout develop
 <section id="pro-orgs">
 ## PROFESSIONAL CONFERENCES AND ORGANIZATIONS
 <div class="section-content">
-* [EdUI](http://eduiconf.org) (Scheduled to teach a ["Sophisticated Animation with JavaScript" workshop](http://eduiconf.org/sessions/javascript-animation/) in October 2016)
+* [EdUI](http://eduiconf.org) (Taught a ["Sophisticated Animation with JavaScript" workshop](http://eduiconf.org/sessions/javascript-animation/) in October 2016)
 * [Code4Lib](https://github.com/code4lib) (Participant and Contributor as there is no official "membership")
 * [Drupal Association](https://www.drupal.org/user/2804475/) (Individual Member)
 * [Association for Computers and Humanities](http://ach.org/) (Individual Member)

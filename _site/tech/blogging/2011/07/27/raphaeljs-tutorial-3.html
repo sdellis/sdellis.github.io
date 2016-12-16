@@ -12,7 +12,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://sdellis.com/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html">
+    <link rel="canonical" href="http://localhost:4000/tech/blogging/2011/07/27/raphaeljs-tutorial-3.html">
     <link rel="shortcut icon" href="favicon.ico">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -99,11 +99,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>So, how does this help us?  It’s inconvenient to have the unit of time stuck in the last array element of the row, and duplicated at that!  What would make our lives easier is to make the key in our array into a unit of time so that we can loop over each day (or what have you… easier than saying “time interval”) and visualize the changes from day to day.  We have several data points that we need to store in each day – basically our x and y coordinates, as well as the size of our bubbles.  So, how do we store all these values in a two dimensional data structure?</p>
 
-<p>Thankfully there are “multi-dimensional arrays,” which allow us to do this.  Multi-dimensional arrays, are basically arrays inside of arrays.  In fact, we have already done this – remember what the data from our spreadsheet looked like when we put it into an array?  Each row became a key, and the values became an array stack.  Now what we want to do is group all “row arrays” with the same day value into another array and set that day as the key.  </p>
+<p>Thankfully there are “multi-dimensional arrays,” which allow us to do this.  Multi-dimensional arrays, are basically arrays inside of arrays.  In fact, we have already done this – remember what the data from our spreadsheet looked like when we put it into an array?  Each row became a key, and the values became an array stack.  Now what we want to do is group all “row arrays” with the same day value into another array and set that day as the key.</p>
 
 <p>To save space, and keep it simple, let’s say we have only two days worth of data for a single bubble – in other words, two rows.  So, we are going to write some code that will take the day value from the 5th column (#4 below) and make that the key for the time grouping.  This is how we want our “day-grouped array” to look:</p>
 
-<pre><code>  '1' ...
+<div class="highlighter-rouge"><pre class="highlight"><code>  '1' ...
 
       '0' ...
 
@@ -131,18 +131,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           '4' =&gt; "2"
 </code></pre>
+</div>
 
 <p>So, this is what our code will look like (new code in red):</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'data.txt'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 
-  <span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="nx">array</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">csv</span><span class="p">(</span><span class="s2">"|"</span><span class="p">)(</span><span class="nx">data</span><span class="p">);</span>
 
   <span class="kd">var</span> <span class="nx">arLen</span><span class="o">=</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
   <span class="kd">var</span> <span class="nx">time_intervals</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="c1">// to store labels for (day, week, month)</span>
 
-  <span class="kd">var</span> <span class="nx">timeGroups</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="c1">// this is the &quot;day-grouped array&quot; example above</span>
+  <span class="kd">var</span> <span class="nx">timeGroups</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="c1">// this is the "day-grouped array" example above</span>
 
 
 
@@ -160,7 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <span class="p">}</span>
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Do you see what’s going on here?  I know, it’s a little hairy.  Let’s take it line by line:</p>
 
@@ -188,7 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>So, because the bubbles we created in the previous lesson don’t have “names”, we will need to get rid of that code, and  repaint them using the first element of the timeGroups array, which holds the starting data for each of the bubbles.  This code would go right after the previous “for” block, but within the last function brace.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">timeGroups</span><span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">4</span><span class="p">]].</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">4</span><span class="p">]].</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 
   <span class="p">}</span>
 
@@ -200,24 +201,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">paper</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">300</span> <span class="o">-</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="nx">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]);</span>
 
-    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="nx">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"fill"</span><span class="p">,</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="nx">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
 
-    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill-opacity&quot;</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span>
+    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"fill-opacity"</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span>
 
-    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="s2">&quot;#fff&quot;</span><span class="p">);</span>
+    <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"stroke"</span><span class="p">,</span> <span class="s2">"#fff"</span><span class="p">);</span>
 
   <span class="p">}</span>
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
-<p>Let’s step through this code line by line as well.  </p>
+<p>Let’s step through this code line by line as well.</p>
 
 <ol>
   <li>
     <p>Here is where we create an array that essentially names our bubbles.  We can store any type of variable in an array value, including strings, other arrays, and “objects”.  Our bubbles are objects.</p>
   </li>
   <li>
-    <p>On the second red line, we are getting the length of the array (bubLen) that is stored in the first timeGroups element so we know how many bubbles to name.  Notice that the element “keys” for the timeGroups array are the labels we used for time_intervals (not the typical incremented numerical values starting at zero).  So, we use the value of the first time_intervals element as the key for getting the first timeGroups element.  </p>
+    <p>On the second red line, we are getting the length of the array (bubLen) that is stored in the first timeGroups element so we know how many bubbles to name.  Notice that the element “keys” for the timeGroups array are the labels we used for time_intervals (not the typical incremented numerical values starting at zero).  So, we use the value of the first time_intervals element as the key for getting the first timeGroups element.</p>
   </li>
   <li>
     <p>Since we will be painting the first bubbles from the first timeGroups element, we need to use time_intervals[0] again to get the data for each bubble (represented by “i”).</p>
@@ -228,7 +229,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>So, this <em>should</em> have been a lot easier than it was.  I don’t know if there’s a bug in the Raphael code, or if I’m doing something wrong, but the following <em>should</em> have worked:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">timeLen</span><span class="o">=</span><span class="nx">time_intervals</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">timeLen</span><span class="o">=</span><span class="nx">time_intervals</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
 <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nx">len</span><span class="o">=</span><span class="nx">timeLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span> <span class="p">){</span>
 
@@ -238,23 +239,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
        <span class="nx">bubbleNames</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">animate</span><span class="p">({</span>
 
-         <span class="nx">cx</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+         <span class="na">cx</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
 
-         <span class="nx">cy</span><span class="o">:</span><span class="mi">300</span> <span class="o">-</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+         <span class="na">cy</span><span class="p">:</span><span class="mi">300</span> <span class="o">-</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
 
-         <span class="nx">r</span><span class="o">:</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+         <span class="na">r</span><span class="p">:</span> <span class="nx">timeGroups</span><span class="p">[</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]][</span><span class="nx">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
 
        <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
 
     <span class="p">}</span>
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
-<p>The above code, may not be perfect because I wasn’t able to test it properly.  It was animating, but the bubbles were not changing course if the data/numbers started declining instead of incrementing – it seemed to “tween” from the beginning value to the last value without paying attention to anything in betwee.  </p>
+<p>The above code, may not be perfect because I wasn’t able to test it properly.  It was animating, but the bubbles were not changing course if the data/numbers started declining instead of incrementing – it seemed to “tween” from the beginning value to the last value without paying attention to anything in betwee.</p>
 
 <p>Anyway, there’s usually a dozen ways to get to the same result when programming (I think I tried them all before I got to this).  When this approach didn’t work, I looked at the <a href="http://raphaeljs.com/reference.html#animate">“keyframes”</a>option for animating the bubbles.  This is tough to do dynamically because you need to know what percentages of the overall animation time should be taken between each “keyframe”.  It would be easy if I could set variables for the percentages, but that wasn’t working.  Luckily there is a powerful, if frowned upon, function in JavaScript, called <em>eval()</em>, for dynamically creating a string and executing it as code.   So that’s what I did here (immediately following the last code block), and although it’s ugly… it worked!</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">bLen</span><span class="o">=</span><span class="nx">timeGroups</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">bLen</span><span class="o">=</span><span class="nx">timeGroups</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">timeLen</span><span class="o">=</span><span class="nx">time_intervals</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
@@ -262,74 +263,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <span class="kd">var</span> <span class="nx">keyframeSplit</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="nx">timeLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
 
-<span class="kd">var</span> <span class="nx">colOrder</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cx&quot;</span><span class="p">,</span><span class="s2">&quot;cy&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">];</span> <span class="c1">// this is the order of the column values in our spreadsheet</span>
+<span class="kd">var</span> <span class="nx">colOrder</span><span class="o">=</span><span class="p">[</span><span class="s2">"cx"</span><span class="p">,</span><span class="s2">"cy"</span><span class="p">,</span><span class="s2">"r"</span><span class="p">];</span> <span class="c1">// this is the order of the column values in our spreadsheet</span>
 
 <span class="kd">var</span> <span class="nx">totalBubbles</span><span class="o">=</span><span class="nx">bubbleNames</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
 <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">len</span><span class="o">=</span><span class="nx">totalBubbles</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;=</span><span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">j</span> <span class="p">){</span> <span class="c1">// for each bubble we created...</span>
 
-    <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span>  <span class="s1">&#39;bubbleNames[&#39;</span><span class="o">+</span><span class="nx">j</span><span class="o">+</span><span class="s1">&#39;].stop()&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span>  <span class="s1">'bubbleNames['</span><span class="o">+</span><span class="nx">j</span><span class="o">+</span><span class="s1">'].stop()'</span><span class="p">;</span>
 
     <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">colnum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">colnum</span> <span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="nx">colnum</span> <span class="p">){</span> <span class="c1">// each column animates with a set of keyframes</span>
 
         <span class="kd">var</span> <span class="nx">frame</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-        <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;.animate({&#39;</span><span class="p">;</span>
+        <span class="nx">str</span> <span class="o">+=</span> <span class="s1">'.animate({'</span><span class="p">;</span>
 
         <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nx">len</span><span class="o">=</span><span class="nx">bLen</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span> <span class="p">){</span> <span class="c1">// create keyframes</span>
 
             <span class="nx">frame</span> <span class="o">=</span> <span class="nx">frame</span> <span class="o">+</span> <span class="nx">keyframeSplit</span><span class="p">;</span>
 
-            <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;&quot;&#39;</span><span class="o">+</span><span class="nx">frame</span><span class="o">+</span><span class="s1">&#39;%&quot;: {&#39;</span><span class="o">+</span><span class="nx">colOrder</span><span class="p">[</span><span class="nx">colnum</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="p">;</span>
+            <span class="nx">str</span> <span class="o">+=</span> <span class="s1">'"'</span><span class="o">+</span><span class="nx">frame</span><span class="o">+</span><span class="s1">'%": {'</span><span class="o">+</span><span class="nx">colOrder</span><span class="p">[</span><span class="nx">colnum</span><span class="p">]</span><span class="o">+</span><span class="s1">':'</span><span class="p">;</span>
 
-	    <span class="k">if</span><span class="p">(</span><span class="nx">colOrder</span><span class="p">[</span><span class="nx">colnum</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;cy&quot;</span><span class="p">){</span> <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;300 -&#39;</span><span class="p">;}</span> <span class="c1">// remember, we need to subtract the canvas height from y</span>
+	    <span class="k">if</span><span class="p">(</span><span class="nx">colOrder</span><span class="p">[</span><span class="nx">colnum</span><span class="p">]</span><span class="o">==</span><span class="s2">"cy"</span><span class="p">){</span> <span class="nx">str</span> <span class="o">+=</span> <span class="s1">'300 -'</span><span class="p">;}</span> <span class="c1">// remember, we need to subtract the canvas height from y</span>
 
-	    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;timeGroups[&#39;</span><span class="o">+</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;][&#39;</span><span class="o">+</span><span class="nx">j</span><span class="o">+</span><span class="s1">&#39;][&#39;</span><span class="o">+</span><span class="nx">colnum</span><span class="o">+</span><span class="s1">&#39;]},&#39;</span><span class="p">;</span>
+	    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">'timeGroups['</span><span class="o">+</span><span class="nx">time_intervals</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="s1">']['</span><span class="o">+</span><span class="nx">j</span><span class="o">+</span><span class="s1">']['</span><span class="o">+</span><span class="nx">colnum</span><span class="o">+</span><span class="s1">']},'</span><span class="p">;</span>
 
 	<span class="p">}</span>
 
-	<span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;}, 5000)&#39;</span><span class="p">;</span>
+	<span class="nx">str</span> <span class="o">+=</span> <span class="s1">'}, 5000)'</span><span class="p">;</span>
 
     <span class="p">}</span>
 
-    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39;;&#39;</span><span class="p">;</span>
+    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">';'</span><span class="p">;</span>
 
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 
     <span class="nb">eval</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>So, I will deconstruct the above code if you need me to, but essentially, I am creating a codeblock that looks like this, putting it into a string variable called “str”, and using the eval() function to execute it for each bubble:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bubbleNames</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">stop</span><span class="p">().</span><span class="nx">animate</span><span class="p">({</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bubbleNames</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">stop</span><span class="p">().</span><span class="nx">animate</span><span class="p">({</span>
 
-    <span class="s2">&quot;34%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cx</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
+    <span class="s2">"34%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cx</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
 
-    <span class="s2">&quot;68%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cx</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
+    <span class="s2">"68%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cx</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
 
-    <span class="s2">&quot;102%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cx</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
-
-<span class="p">},</span> <span class="mi">5000</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
-
-    <span class="s2">&quot;34%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cy</span><span class="o">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
-
-    <span class="s2">&quot;68%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cy</span><span class="o">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
-
-    <span class="s2">&quot;102%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">cy</span><span class="o">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
+    <span class="s2">"102%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cx</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span>
 
 <span class="p">},</span> <span class="mi">5000</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
 
-    <span class="s2">&quot;34%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">r</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+    <span class="s2">"34%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cy</span><span class="p">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
 
-    <span class="s2">&quot;68%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">r</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+    <span class="s2">"68%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cy</span><span class="p">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
 
-    <span class="s2">&quot;102%&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">r</span><span class="o">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+    <span class="s2">"102%"</span><span class="p">:</span> <span class="p">{</span><span class="na">cy</span><span class="p">:</span><span class="mi">300</span> <span class="o">-</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]},</span>
 
-<span class="p">},</span> <span class="mi">5000</span><span class="p">);</span></code></pre></div>
+<span class="p">},</span> <span class="mi">5000</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
 
-<p>You will notice that the x, y, and radius animations are happening in the span of 5 seconds (5000 miliseconds).  You will also notice that my math for percentages is not perfect… I rounded any decimals up, and could have added an extra step here to keep it to 100%, but it didn’t seem to matter that it was over, so whatever.  </p>
+    <span class="s2">"34%"</span><span class="p">:</span> <span class="p">{</span><span class="na">r</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+
+    <span class="s2">"68%"</span><span class="p">:</span> <span class="p">{</span><span class="na">r</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+
+    <span class="s2">"102%"</span><span class="p">:</span> <span class="p">{</span><span class="na">r</span><span class="p">:</span><span class="nx">timeGroups</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]},</span>
+
+<span class="p">},</span> <span class="mi">5000</span><span class="p">);</span></code></pre></figure>
+
+<p>You will notice that the x, y, and radius animations are happening in the span of 5 seconds (5000 miliseconds).  You will also notice that my math for percentages is not perfect… I rounded any decimals up, and could have added an extra step here to keep it to 100%, but it didn’t seem to matter that it was over, so whatever.</p>
 
 <p>So, this is no doubt a bit confusing!  Looping through arrays can be a mind bender, so if you do a “view source” on the following example, there is a function called “dump()” that spits them out on the page in a more visual way.  Anyway, you can see the full, working code here (and view source it):</p>
 

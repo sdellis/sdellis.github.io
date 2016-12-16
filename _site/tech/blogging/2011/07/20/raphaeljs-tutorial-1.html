@@ -12,7 +12,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://sdellis.com/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html">
+    <link rel="canonical" href="http://localhost:4000/tech/blogging/2011/07/20/raphaeljs-tutorial-1.html">
     <link rel="shortcut icon" href="favicon.ico">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -89,102 +89,102 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>In order to start using a code library, we need to include it in our HTML and since Raphael uses HTML5’s vector graphic capabilities, we need to use HTML5.  So, the first step is to create an HTML5 document.  This will rarely change and it’s super easy:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span></code></pre></div>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span></code></pre></figure>
 
 <h3 id="step-2-include-the-raphael-and-jquery-libraries">Step 2: Include the Raphael and jQuery Libraries</h3>
 
 <p>Now we need to include the code libraries that make it easy to draw shapes without the math.  The Raphael library is itself dependent on the jQuery library, so we need to include both of them.  So go <a href="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js">here</a> and save all that gobbledygook in the same folder as your HTML file (raphael-min.js works for a filename).  Then go <a href="http://raphaeljs.com/jquery.js">here</a>, and save that as jquery.js in the same folder as well.  Don’t worry if you don’t understand that stuff.  The point is you don’t need to!  Now, we will include them in the HTML by inserting the red code after the <title> tag like so:</title></p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;raphael-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"raphael-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="step-3-create-a-canvas">Step 3: Create a Canvas</h3>
 
 <p>Next we need to create an area where we can draw.  This is a simple &lt;div&gt; tag with an “id” attribute.  While we’re at it, we should add some CSS so that we can actually see the canvas against the white background.  We’ll put a light grey gesso on it ;-).  Voila, your first HTML5 page!</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;raphael-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"raphael-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span> <span class="na">media=</span><span class="s">"screen"</span><span class="nt">&gt;</span>
     <span class="nf">#canvas</span> <span class="p">{</span>
-	      <span class="k">background-color</span><span class="o">:</span><span class="m">#ccc</span><span class="p">;</span>
-        <span class="k">color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
-	      <span class="k">border</span><span class="o">:</span><span class="m">#000</span> <span class="k">dotted</span><span class="p">;</span>
-        <span class="k">left</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-        <span class="k">margin</span><span class="o">:</span> <span class="m">-150px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">-400px</span><span class="p">;</span>
-        <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-        <span class="k">top</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">300px</span><span class="p">;</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">800px</span><span class="p">;</span>
+	      <span class="nl">background-color</span><span class="p">:</span><span class="m">#ccc</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+	      <span class="nl">border</span><span class="p">:</span><span class="m">#000</span> <span class="nb">dotted</span><span class="p">;</span>
+        <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">-150px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">-400px</span><span class="p">;</span>
+        <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+        <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="nt">&lt;/style&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;canvas&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"canvas"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
 <h3 id="step-4-draw-a-circle">Step 4: Draw a Circle</h3>
 
 <p>Now that we have a canvas, let’s place a single bubble on it using Raphael’s “circle” function.  But first, there’s one little trick you need to know about jQuery: everything must go inside a<script>$(function () { code here... }</script> wrapper for it to work.  The purpose of this wrapper is to ensure that the page is fully loaded before any code is executed (there are reasons for this, but they’re not important right now).  You can think of it as just an elaborately complex “tag” container for all your JavaScript code.  The green code is straight from the Raphael reference page.  It seems redundant to have to create a variable named “paper” when you already have a “canvas”, but you basically need to do this to “bind” the div as Raphael’s drawing area.  This code is your final HTML5 page with your circle on it:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;title&gt;</span>Bubble Chart<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;raphael-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"raphael-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;script&gt;</span>
 
   <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 
       <span class="c1">// Creates canvas 420 × 300 and positioned via the #canvas stylesheet rules</span>
-  	  <span class="kd">var</span> <span class="nx">paper</span> <span class="o">=</span> <span class="nx">Raphael</span><span class="p">(</span><span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="mi">420</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+  	  <span class="kd">var</span> <span class="nx">paper</span> <span class="o">=</span> <span class="nx">Raphael</span><span class="p">(</span><span class="s2">"canvas"</span><span class="p">,</span> <span class="mi">420</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
 
-  	   <span class="c1">// Creates circle at x = 50, y = 40, with radius 10 using the &quot;circle&quot; function</span>
+  	   <span class="c1">// Creates circle at x = 50, y = 40, with radius 10 using the "circle" function</span>
       <span class="kd">var</span> <span class="nx">bubble</span> <span class="o">=</span> <span class="nx">paper</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 
-  	   <span class="c1">// Sets the fill attribute of the circle to red (#f00)using the &quot;attr&quot; (attribute) function</span>
-       <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="s2">&quot;#f00&quot;</span><span class="p">);</span>
+  	   <span class="c1">// Sets the fill attribute of the circle to red (#f00)using the "attr" (attribute) function</span>
+       <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"fill"</span><span class="p">,</span> <span class="s2">"#f00"</span><span class="p">);</span>
 
        <span class="c1">// Sets the stroke attribute of the circle to white</span>
-       <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="s2">&quot;#fff&quot;</span><span class="p">);</span>
+       <span class="nx">bubble</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"stroke"</span><span class="p">,</span> <span class="s2">"#fff"</span><span class="p">);</span>
   <span class="p">});</span>
 
   <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span> <span class="na">media=</span><span class="s">"screen"</span><span class="nt">&gt;</span>
 
       <span class="nf">#canvas</span> <span class="p">{</span>
-  	      <span class="k">background-color</span><span class="o">:</span><span class="m">#ccc</span><span class="p">;</span>
-          <span class="k">color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
-  	      <span class="k">border</span><span class="o">:</span><span class="m">#000</span> <span class="k">dotted</span><span class="p">;</span>
-          <span class="k">left</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-          <span class="k">margin</span><span class="o">:</span> <span class="m">-150px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">-400px</span><span class="p">;</span>
-          <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-          <span class="k">top</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-          <span class="k">width</span><span class="o">:</span> <span class="m">300px</span><span class="p">;</span>
-          <span class="k">width</span><span class="o">:</span> <span class="m">800px</span><span class="p">;</span>
+  	      <span class="nl">background-color</span><span class="p">:</span><span class="m">#ccc</span><span class="p">;</span>
+          <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  	      <span class="nl">border</span><span class="p">:</span><span class="m">#000</span> <span class="nb">dotted</span><span class="p">;</span>
+          <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+          <span class="nl">margin</span><span class="p">:</span> <span class="m">-150px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">-400px</span><span class="p">;</span>
+          <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+          <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+          <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+          <span class="nl">width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
       <span class="p">}</span>
   <span class="nt">&lt;/style&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;canvas&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"canvas"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
 <p><strong>Further reading:</strong> <a href="http://docs.jquery.com/Tutorials:How_jQuery_Works#jQuery:_The_Basics">How jQuery Works</a></p>
 
