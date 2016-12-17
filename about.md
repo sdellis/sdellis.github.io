@@ -55,11 +55,10 @@ Collaborative, thoughtful UX Developer seeking the next challenge to design and 
 ## PROFESSIONAL EXPERIENCE
 <div class="section-content">
 ### User Interface Developer <br/>Princeton University Library, 2010 - Present
-* Designed and developed the [Rare Books and Special Collections website](http://rbsc.princeton.edu/) (Drupal 7).
+* Designed and developed the [Rare Books and Special Collections website](http://rbsc.princeton.edu/) (Drupal 7) aggregating curator blogs, collection strengths and topics, collections, exhibitions, research tools, and publications into a single site with “federated” search.
 * Enhanced Omeka's Scripto plugin and Scribe theme to create a ["DIY History-like" application](http://transcribe.princeton.edu/items/show/25) for the transcription of Western Americana resources for an undergraduate History class.
 * Played an integral part designing, organizing, and conducting Usability tests for all major Library websites, including our recently released [Discovery Interface](https://pulsearch.princeton.edu) (Blacklight).  Tested for viability of new interface concepts, and to better understand the goals of our users.  I have co-authored [an article](http://journal.code4lib.org/articles/7394) and [given talks](https://github.com/pulibrary/dlf2012-talk) on the process.
 * Responsible for developing an innovative interface for our [Finding Aids site](http://findingaids.princeton.edu/) (archives), which won both the [2013 SAA Coker Award](http://www2.archivists.org/governance/handbook/section12-coker) and the [2013 MARAC Finding Aid Award](https://blogs.princeton.edu/mudd/2013/04/princeton-wins-marac-finding-aid-award/).
-* Redesigned and developed the [Rare Books and Special Collections website](http://rbsc.princeton.edu/) in Drupal 7, aggregating curator blogs, collection strengths and topics, collections, exhibitions, research tools, and publications into a single site with "federated" search.
 * Responsible for the interface of the [Princeton University Digital Library](http://pudl.princeton.edu/), which includes modifications to the IA BookReader, and integration of Loris (IIIF Images) and OpenSeadragon for deep zoom. ([example](http://pudl.princeton.edu/viewer.php?obj=ms35t871w#page/18/mode/2up)).
 * Active in the [IIIF Software Developers Interest Group](http://iiif.io/community/groups/software/). Committer to [Mirador](https://github.com/IIIF/mirador), a IIIF Presentation Viewer, as well as [Viewdir web components](https://github.com/viewdir).
 * Created application for [turning METS records into IIIF Presentation API manifests](http://sdellis.com/tech/blogging/2015/06/10/spiiiffy.html) to allow users to browse our Digital Library resources with Mirador or the Universal Viewer. (under development, not in production)
@@ -105,7 +104,7 @@ requirements, manage expectations, and provide status reports throughout develop
 ## PROFESSIONAL CONFERENCES, ORGANIZATIONS, and ROLES
 <div class="section-content">
 * Adjunct User Experience Instructor at [Rider University](http://www.rider.edu/)
-* Member of the Technology Advisory Council for the [Princeton Public Library](https://www.princetonlibrary.org/)
+* Active Member of the Technology Advisory Council for the [Princeton Public Library](https://www.princetonlibrary.org/)
 * [EdUI](http://eduiconf.org) (Taught a ["Sophisticated Animation with JavaScript" workshop](http://eduiconf.org/sessions/javascript-animation/) in October 2016)
 * [NISO GitHub Training Workshop](https://niso.webex.com/ec3000/eventcenter/recording/recordAction.do?theAction=poprecord&siteurl=niso&entappname=url3000&internalRecordTicket=4832534b0000000247dcaa5ecf1a5bc052c3659440aa869de4ee96bdbc269b75cdca444709653753&renewticket=0&isurlact=true&format=short&rnd=3577096048&RCID=0689330fd87ff3d3b7ca46423de4876b&rID=97228507&needFilter=false&recordID=97228507&apiname=lsr.php&AT=pb&actappname=ec3000&&SP=EC&entactname=%2FnbrRecordingURL.do&actname=%2Feventcenter%2Fframe%2Fg.do) (Presented on ["GitHub as CMS" workshop](https://docs.google.com/presentation/d/11eQVQjdewcZ9zsIdOgMiByemm_CnB8XmBLgvaiDjjbI/edit?usp=sharing) in February 2016)
 * [Code4Lib](https://github.com/code4lib) (Participant and Contributor as there is no official "membership")
