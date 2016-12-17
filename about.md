@@ -8,7 +8,7 @@ permalink: /cv/
 ## UX Developer
 609.933.7442 &bull; shaun@sdellis.com &bull; [GitHub](https://github.com/sdellis) &bull; [npm](https://www.npmjs.com/~sdellis)
 
-Collaborative, thoughtful UX Developer seeking the next challenge to design and improve a product’s desktop, tablet, and mobile experiences. Bridges the gap between design and technology to establish solid working relationships and effective collaboration among teams.
+Collaborative, thoughtful UX Developer seeking the next challenge to design and improve desktop, tablet, and mobile experiences. Bridges the gap between design and technology to establish solid working relationships and effective collaboration among teams.
 
 </section>
 <section id="skills">
