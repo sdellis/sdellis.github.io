@@ -15,7 +15,7 @@ Collaborative, thoughtful UX Developer seeking the next challenge to design and 
 ## SKILLS
 * Semantic accessible HTML5
 * CSS, SCSS, LESS, responsive design
-* JavaScript (native, TypeScript, jQuery/jQueryUI, Node/Express.js/npm, Backbone/Ampersand, React)
+* JavaScript (native, TypeScript, jQuery/jQueryUI, Node/Express.js/npm, Backbone/Ampersand, React, Redux)
 * Familiarity with ARIA attributes and usage
 * Ruby (Rails, Sinatra, [Jekyll](http://2016.code4lib.org), [scripting](https://github.com/pulibrary/pulfa-sausage-factory), Nokogiri, [Blacklight](http://projectblacklight.org/) and [Hydra](https://projecthydra.org/) experience)
 * PHP (native, [WordPress](http://www.peacepraxis.com), [Omeka](http://transcribe.princeton.edu/collections/show/1))
@@ -25,7 +25,7 @@ Collaborative, thoughtful UX Developer seeking the next challenge to design and 
 * Databases & Data Structures (relational/SQL, document-oriented, XML, json, RDF/LinkedData)
 * [REST API Development](http://sdellis.com/docs/blue_mountain_ui_spec.pdf)
 * Knowledge of Metadata Standards (IIIF, RDF/Linked Data, Dublin Core, METS, PREMIS, MODS, VRA Core, EAD, SKOS)
-* Test Driven Development & Continuous Integration (tape, [Istanbul/Mocha](https://github.com/IIIF/manifesto), phantomJS/SauceLabs, rspec, TravisCI)
+* Test Driven Development & Continuous Integration (tape, [Mocha](https://github.com/viewdir/component-boilerplate-redux), jsdom, phantomJS/SauceLabs, rspec, TravisCI)
 * [UX design](http://journal.code4lib.org/articles/7394), interaction design, [usability testing](http://sdellis.com/docs/pul_website_usability_study.pdf)
 * [Github](https://github.com/sdellis), git workflow
 * Apache Solr
