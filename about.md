@@ -103,8 +103,11 @@ requirements, manage expectations, and provide status reports throughout develop
 <section id="pro-orgs">
 ## PROFESSIONAL CONFERENCES, ORGANIZATIONS, and ROLES
 <div class="section-content">
+* [EdUI](http://eduiconf.org) (Leading a ["Introduction to IIIF" workshop](http://eduiconf.org/sessions/introduction-to-iiif/) in September 2017)
 * Adjunct User Experience Instructor at [Rider University](http://www.rider.edu/)
 * Active Member of the Technology Advisory Council for the [Princeton Public Library](https://www.princetonlibrary.org/)
+* Active Member of [Code For Princeton](https://codeforprincetonblog.wordpress.com/aboutus/), a Code For America brigade
+* Volunteer Technology Instructor for Princeton Public Library (Summer 2017 App2Idea series)
 * [EdUI](http://eduiconf.org) (Taught a ["Sophisticated Animation with JavaScript" workshop](http://eduiconf.org/sessions/javascript-animation/) in October 2016)
 * [NISO GitHub Training Workshop](https://niso.webex.com/ec3000/eventcenter/recording/recordAction.do?theAction=poprecord&siteurl=niso&entappname=url3000&internalRecordTicket=4832534b0000000247dcaa5ecf1a5bc052c3659440aa869de4ee96bdbc269b75cdca444709653753&renewticket=0&isurlact=true&format=short&rnd=3577096048&RCID=0689330fd87ff3d3b7ca46423de4876b&rID=97228507&needFilter=false&recordID=97228507&apiname=lsr.php&AT=pb&actappname=ec3000&&SP=EC&entactname=%2FnbrRecordingURL.do&actname=%2Feventcenter%2Fframe%2Fg.do) (Presented on ["GitHub as CMS"](https://docs.google.com/presentation/d/11eQVQjdewcZ9zsIdOgMiByemm_CnB8XmBLgvaiDjjbI/edit?usp=sharing) in February 2016)
 * [Code4Lib](https://github.com/code4lib) (Participant and Contributor as there is no official "membership")

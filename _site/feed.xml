@@ -6,9 +6,9 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 17 Dec 2016 15:35:08 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 15:35:08 -0500</lastBuildDate>
-    <generator>Jekyll v3.3.1</generator>
+    <pubDate>Thu, 06 Jul 2017 15:58:08 -0400</pubDate>
+    <lastBuildDate>Thu, 06 Jul 2017 15:58:08 -0400</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Creative Coding</title>
@@ -143,16 +143,16 @@ he made, I was skeptical but intrigued. I went upstairs and played his game call
 
 &lt;p&gt;Tabula is my attempt to address these suggestions, although Tufte makes a tall order and I am starting with baby steps.  Tabula wasn’t supposed to simply be a starter kit.  In fact, when it is fully compliant with the IIIF specs, I intend to “freeze” it (perhaps with a new name) and move onto my original idea, which is a IIIF-based slideshow application. The first iteration of this slideshow application is meant to emphasize evidence through &lt;strong&gt;four different approaches&lt;/strong&gt;, listed below with possibly more to come.&lt;/p&gt;
 
-&lt;h3 id=&quot;revelation&quot;&gt;1. Revelation&lt;/h3&gt;
+&lt;h3 id=&quot;1-revelation&quot;&gt;1. Revelation&lt;/h3&gt;
 &lt;p&gt;Most people are familiar with the “Ken Burns effect”, the slow image zooming and panning technique that was popularized in the Civil War documentaries. Variations of this technique not only create movement that can hold an audiences’ attention, but they can be used to reveal certain information within a scene, sometimes revealing the bigger picture, and sometimes revealing greater detail.  We can also think of a faster version of this technique as another approach to revelation, serving as a “tour” around details of an image that help us connect the dots of what we are looking at.  Finally, a simple “controlled scroll” could be used to provide a non-slippy interface to a resource that must be larger than the viewport to read comfortably.&lt;/p&gt;
 
-&lt;h3 id=&quot;comparison&quot;&gt;2. Comparison&lt;/h3&gt;
+&lt;h3 id=&quot;2-comparison&quot;&gt;2. Comparison&lt;/h3&gt;
 &lt;p&gt;There are two approaches to comparison of images.  The first is to situate two or more images side by side, making it easy to compare and contrast characteristics. The other is to provide an overlay of images that can be set to have different transparency values. Of course, there’s no reason that the Revelation techniques described above couldn’t be applied to Comparison-based slide templates.&lt;/p&gt;
 
-&lt;h3 id=&quot;data-and-visualization&quot;&gt;3. Data and Visualization&lt;/h3&gt;
+&lt;h3 id=&quot;3-data-and-visualization&quot;&gt;3. Data and Visualization&lt;/h3&gt;
 &lt;p&gt;One of the problems with PowerPoint that Tufte points out is the fact that the resolution is too low to reveal any meaningful data, and authors must resort to simple bullet points to get their point across. The ability to add dynamic, interactive visualizations to slides, or to zoom in on high resolution static visualizations is key to emphasizing data and evidence in an argument.&lt;/p&gt;
 
-&lt;h3 id=&quot;dialogue&quot;&gt;4. Dialogue&lt;/h3&gt;
+&lt;h3 id=&quot;4-dialogue&quot;&gt;4. Dialogue&lt;/h3&gt;
 &lt;p&gt;Finally, the ability to have a discussion through annotations (synchronously or asyncronously) is as important as the ability to observe when it comes to understanding. The ability to filter comments and questions based on reputation, institution, or other criteria can help determine the authority of a commentator. And because citations are “free” and automatic with IIIF resources, we can always gauge the authenticity of the resource and how credible it may be. All slides enable annotations in the form of text, audio, video, and drawing directly on the canvas.&lt;/p&gt;
 
 &lt;p&gt;Making Tabula compliant with IIIF APIs is a huge part of making this a reality.  While the above techniques would be possible without IIIF, and modern slideshow apps like Reveal.js offer more features than PowerPoint, easy access to good content cannot be understated, and that is the promise of IIIF.  The ability to create presentations from interoperable content held at renowned institutions of learning makes it easy for instructors to incorporate centuries of rich cultural and scientific history into their lessons and presentations. (In case there is any question, I should mention that instructors can always add their own non-IIIF content as well.)&lt;/p&gt;
@@ -215,7 +215,7 @@ he made, I was skeptical but intrigued. I went upstairs and played his game call
 &lt;h2 id=&quot;structured-data&quot;&gt;Structured Data&lt;/h2&gt;
 &lt;p&gt;We wanted to allow the community to contribute nominations for keynote speakers or talk/workshop proposals without having to make a pull request.  The process had to be as simple as possible, and we need the data to be structured to make it easy to load into our Diebold-o-tron voting app since all content-oriented conference decisions are decided democratically by the community.  Github’s static site generator, Jekyll, has a way to use structured data when building a site, but we needed a more user friendly way than a “pull request” to collect that data.  In the end, we were able to create Google Forms that saved user contributed data to Spreadsheets in a structured way.  With Sheetsu, &lt;a href=&quot;http://roastduckalamode.github.io/fromSheetsToJekyll/&quot;&gt;@roastduckalamode devised a way to turn the spreadsheets into YAML&lt;/a&gt;.  This will serve us well when we have our final speakers and schedule.  However, we need to display the data in real-time so that users know that they are not submitting a duplicate talk.  Using &lt;a href=&quot;https://github.com/jsoma/tabletop&quot;&gt;Tabletop.js&lt;/a&gt; &lt;a href=&quot;https://github.com/bibliotechy&quot;&gt;@bibliotechy&lt;/a&gt; and &lt;a href=&quot;https://github.com/roastduckalamode&quot;&gt;@roastduckalamode&lt;/a&gt; came up with a fairly performant way to &lt;a href=&quot;http://2016.code4lib.org/proposed-talks.html&quot;&gt;pull the data into the site&lt;/a&gt; using the Google Docs API.&lt;/p&gt;
 
-&lt;h2 id=&quot;in-the-end-hellip&quot;&gt;In the end …&lt;/h2&gt;
+&lt;h2 id=&quot;in-the-end-&quot;&gt;In the end …&lt;/h2&gt;
 &lt;p&gt;Nothing’s perfect, and there’s still some technical overhead, but this will be by far the most usable Code4Lib conference site to date.  If it’s any proof, we’ve already added a number of sponsors who knew nothing about Code4Lib until this year.  It’s not as easy as it would seem to try to change things in a space without authority. But if, as Eric Schmidt (former CEO of Google) said, the Internet is the largest experiment in anarchy we’ve ever had, Code4Lib fully embodies that spirit.&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2015 10:29:20 -0400</pubDate>
